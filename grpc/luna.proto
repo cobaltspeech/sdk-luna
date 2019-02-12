@@ -1,0 +1,68 @@
+// Copyright (2019) Cobalt Speech and Language Inc.
+
+syntax = "proto3";
+
+package cobaltspeech.luna;
+
+// Service that implements the Cobalt Luna Text-to-Speech API
+service Luna {
+
+  // Queries the Version of the Server
+  rpc Version (VersionRequest) returns (VersionResponse);
+
+  // Retrieves a list of available text-to-speech voices
+  rpc ListVoices (ListVoicesRequest) returns (ListVoicesResponse);
+
+  // Performs synchronous text-to-speech generation.
+  rpc Synthesize (SynthesizeRequest) returns (SynthesizeResponse);
+}
+
+// The top-level message sent by the client for the `Version` method.
+message VersionRequest {}
+
+// The top-level message sent by the client for the `ListVoices` method.
+message ListVoicesRequest {}
+
+// The top-level message sent by the client for the `Synthesize` method.
+message SynthesizeRequest {
+  // Provides configuration for the text-to-speech engine.
+  SynthesizerConfig config = 1;
+
+  // The text to generate speech for.
+  string text = 2;
+}
+
+// Configuration for setting up the text-to-speech engine.
+message SynthesizerConfig {
+  string voice_id = 1;
+}
+
+// The message sent by the server for the `Version` method.
+message VersionResponse {
+  string version = 1;
+}
+
+// The message sent by the server for the `ListVoices` method.
+message ListVoicesResponse {
+  // List of voices available for use that match the request.
+  repeated Voice voices = 1;
+}
+
+// Description of a Luna Voice
+message Voice {
+  // Unique identifier of the voice.  This identifier is used to choose the
+  // voice during a synthesis request, and is specified in the
+  // `SynthesizerConfig` message.
+  string id = 1;
+
+  // Name of the voice.  This is a concise name describing the voice, and maybe
+  // presented to the end-user, for example, to help which voice to choose for
+  // their TTS task.
+  string name = 2;
+}
+
+// The message returned to the client by the `Synthesize` method.
+message SynthesizeResponse {
+  // Audio samples of the entire generated speech, in the 32-bit float encoding, single channel, sampled at 48KHz.
+  repeated float samples = 1;
+}
