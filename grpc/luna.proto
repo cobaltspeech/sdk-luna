@@ -4,6 +4,8 @@ syntax = "proto3";
 
 package cobaltspeech.luna;
 
+option go_package="lunapb";
+
 // Service that implements the Cobalt Luna Text-to-Speech API
 service Luna {
 
