@@ -20,3 +20,6 @@ Code generation has the following dependencies:
   - The golang plugins:
     - `go get -u google.golang.org/grpc`
     - `go get -u github.com/golang/protobuf/protoc-gen-go`
+  - The python plugins:
+    - `python -m pip install grpcio`
+    - `python -m pip install grpcio-tools`
