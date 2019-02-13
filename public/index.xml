@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Luna SDK Documentation</title>
+    <link>/</link>
+    <description>Recent content on Luna SDK Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Feb 2019 12:56:41 +0530</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cobalt&#39;s Luna SDK Documentation</title>
+      <link>/main/</link>
+      <pubDate>Wed, 13 Feb 2019 12:56:41 +0530</pubDate>
+      
+      <guid>/main/</guid>
+      <description>Luna SDK Luna is Cobalt&amp;rsquo;s text-to-speech engine. It can be bundled into your application as a library, or deployed on-prem and accessed over the network. This documentation refers to accessing the network-based luna server.
+Cobalt will provide you with a package of Luna that contains the engine, your voice objects, and a server application. This server exports Luna&amp;rsquo;s functionality over the gRPC protocol. The https://github.com/cobaltspeech/luna-sdk repository contains the SDK that you can use in your application to communicate with the Luna server.</description>
+    </item>
+    
+    <item>
+      <title>API Specification</title>
+      <link>/autogen-doc-luna-proto/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/autogen-doc-luna-proto/</guid>
+      <description>API Specification The Luna API is specified as a proto file. This section of the documentation is auto-generated from the spec. It describes the data types and functions defined in the spec. The &amp;ldquo;messages&amp;rdquo; below correspond to the data structures to be used, and the &amp;ldquo;service&amp;rdquo; contains the methods that can be called.
+luna.proto Service: Luna Service that implements the Cobalt Luna Text-to-Speech API
+   Method Name Request Type Response Type Description     Version VersionRequest VersionResponse Queries the Version of the Server   ListVoices ListVoicesRequest ListVoicesResponse Retrieves a list of available text-to-speech voices   Synthesize SynthesizeRequest SynthesizeResponse Performs synchronous text-to-speech generation.</description>
+    </item>
+    
+  </channel>
+</rss>

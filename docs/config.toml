@@ -1,0 +1,43 @@
+baseURL = ""
+languageCode = "en-us"
+title = "Luna SDK Documentation -- Cobalt Speech"
+theme = "docuapi"
+
+
+# Code higlighting settings
+pygmentsCodefences = true
+pygmentsCodeFencesGuesSsyntax = false
+pygmentsOptions = ""
+pygmentsStyle = "monokai"
+# The monokai stylesheet is included in the base template.
+pygmentsUseClasses = true
+
+defaultContentLanguage = "en"
+
+[params]
+search = false
+
+# Configure the language example tabs.
+[[params.language_tabs]]
+key = "go"
+name = "Go"
+[[params.language_tabs]]
+key = "python"
+name = "Python"
+
+#Languages
+[languages]
+
+[languages.en]
+languageName = "English"
+weight = 2
+title = "Luna SDK Documentation"
+
+# Left sidebar footer items. Use HTMl or Markdown.
+toc_footers = [
+"<a href='https://www.cobaltspeech.com/contact'>Contact us</a>",
+]
+
+[languages.en.blackfriday]
+angledQuotes = false
+hrefTargetBlank = true
