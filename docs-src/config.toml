@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "https://cobaltspeech.github.io/sdk-luna"
 languageCode = "en-us"
 title = "Luna SDK Documentation -- Cobalt Speech"
 theme = "docuapi"

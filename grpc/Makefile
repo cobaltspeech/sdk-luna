@@ -6,7 +6,7 @@ all: go py docs
 
 GO_OUTDIR=go-luna/lunapb
 PY_OUTDIR=py-luna/luna
-DOCS_OUTDIR=../docs/content
+DOCS_OUTDIR=../docs-src/content
 
 go: ${GO_OUTDIR}/luna.pb.go
 py: ${PY_OUTDIR}/luna_pb2.py ${PY_OUTDIR}/luna_pb2_grpc.py

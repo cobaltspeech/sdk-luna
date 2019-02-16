@@ -30,7 +30,7 @@ Code generation has the following dependencies:
 The documentation here is generated using the excellent static-site generator,
 [Hugo](https://gohugo.io). The hugo-template in use is
 [docuapi](https://themes.gohugo.io/docuapi/). The content is authored in the
-`docs/content` folder, and hugo-generated static website is stored in the `public`
+`docs-src/content` folder, and hugo-generated static website is stored in the `docs`
 folder.
 
 You can download the latest hugo binary from the [release
@@ -43,8 +43,8 @@ To generate the static documentation content, run:
 pushd grpc && make && popd
 
 # then build the static documentation pages
-pushd docs && hugo -d ../public && popd
+pushd docs-src && hugo -d ../docs && popd
 ```
 
 Please make sure that when changing the documentation, the newly generated
-changes in `public` are also checked into this repository.
+changes in `docs` are also checked into this repository.

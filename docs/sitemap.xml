@@ -3,27 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/main/</loc>
+    <loc>https://cobaltspeech.github.io/sdk-luna/main/</loc>
     <lastmod>2019-02-13T12:56:41+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/autogen-doc-luna-proto/</loc>
+    <loc>https://cobaltspeech.github.io/sdk-luna/autogen-doc-luna-proto/</loc>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://cobaltspeech.github.io/sdk-luna/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://cobaltspeech.github.io/sdk-luna/</loc>
     <lastmod>2019-02-13T12:56:41+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://cobaltspeech.github.io/sdk-luna/tags/</loc>
     <priority>0</priority>
   </url>
   

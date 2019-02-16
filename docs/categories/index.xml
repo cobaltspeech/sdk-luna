@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Luna SDK Documentation</title>
-    <link>/categories/</link>
+    <link>https://cobaltspeech.github.io/sdk-luna/categories/</link>
     <description>Recent content in Categories on Luna SDK Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cobaltspeech.github.io/sdk-luna/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
