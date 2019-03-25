@@ -3,22 +3,40 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://cobaltspeech.github.io/sdk-luna/main/</loc>
-    <lastmod>2019-02-13T12:56:41+05:30</lastmod>
+    <loc>https://cobaltspeech.github.io/sdk-luna/getting-started/</loc>
   </url>
   
   <url>
-    <loc>https://cobaltspeech.github.io/sdk-luna/autogen-doc-luna-proto/</loc>
-  </url>
-  
-  <url>
-    <loc>https://cobaltspeech.github.io/sdk-luna/categories/</loc>
-    <priority>0</priority>
+    <loc>https://cobaltspeech.github.io/sdk-luna/getting-started/installation/</loc>
   </url>
   
   <url>
     <loc>https://cobaltspeech.github.io/sdk-luna/</loc>
     <lastmod>2019-02-13T12:56:41+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cobaltspeech.github.io/sdk-luna/protobuf/</loc>
+  </url>
+  
+  <url>
+    <loc>https://cobaltspeech.github.io/sdk-luna/getting-started/quickstart/</loc>
+  </url>
+  
+  <url>
+    <loc>https://cobaltspeech.github.io/sdk-luna/getting-started/mutually_authenticated_tls/</loc>
+  </url>
+  
+  <url>
+    <loc>https://cobaltspeech.github.io/sdk-luna/protobuf/autogen-doc-cubic-proto/</loc>
+  </url>
+  
+  <url>
+    <loc>https://cobaltspeech.github.io/sdk-luna/_header/</loc>
+  </url>
+  
+  <url>
+    <loc>https://cobaltspeech.github.io/sdk-luna/categories/</loc>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting started on Luna SDK -- Cobalt</title>
+    <link>https://cobaltspeech.github.io/sdk-luna/getting-started/</link>
+    <description>Recent content in Getting started on Luna SDK -- Cobalt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://cobaltspeech.github.io/sdk-luna/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installation</title>
+      <link>https://cobaltspeech.github.io/sdk-luna/getting-started/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cobaltspeech.github.io/sdk-luna/getting-started/installation/</guid>
+      <description>Instructions for installing the SDK are language-specific.
+Go The Go SDK supports go modules. We recommend using Go 1.11 or later. You can download the sdk using:
+go get -u github.com/cobaltspeech/sdk-luna/grpc/go-luna
+Alternatively, if you just import github.com/cobaltspeech/sdk-luna/grpc/go-luna in your application and run go mod tidy, it will be fetched automatically.
+Python The Python SDK supports installation via pip. We recommend Python 3.5 or later, and pip 19.0 or later. You can download the sdk using:</description>
+    </item>
+    
+    <item>
+      <title>Quickstart</title>
+      <link>https://cobaltspeech.github.io/sdk-luna/getting-started/quickstart/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cobaltspeech.github.io/sdk-luna/getting-started/quickstart/</guid>
+      <description>Once you have your Luna server up and running, let&amp;rsquo;s see how we can ask it to synthesize speech for some text!
+First, you need to know the address (host:port) where the server is running. This document will assume the values 127.0.0.1:2727, but be sure to change those to point to your server instance. Port 2727 is the default port that the luna server binds to.
+The following code snippet queries the server for a list of available voices, and uses the first listed voice to run text to speech.</description>
+    </item>
+    
+    <item>
+      <title>Mutually Authenticated TLS</title>
+      <link>https://cobaltspeech.github.io/sdk-luna/getting-started/mutually_authenticated_tls/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cobaltspeech.github.io/sdk-luna/getting-started/mutually_authenticated_tls/</guid>
+      <description>In our recommended default setup, TLS is enabled in the gRPC setup, and when connecting to the server, clients check the server&amp;rsquo;s SSL certificate to verify that they are talking to an authentic server. This is similar to how &amp;ldquo;https&amp;rdquo; connections work in web browsers.
+It may sometimes be required that both the client and server need to authenticate with each other when establishing the connection. This is possible by configuring the luna client with a valid certificate file, which it presents to the luna server when negotiating TLS connection.</description>
+    </item>
+    
+  </channel>
+</rss>

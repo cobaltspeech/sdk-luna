@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Protobuf Reference on Luna SDK -- Cobalt</title>
+    <link>https://cobaltspeech.github.io/sdk-luna/protobuf/</link>
+    <description>Recent content in Protobuf Reference on Luna SDK -- Cobalt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://cobaltspeech.github.io/sdk-luna/protobuf/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Proto Generated Docs</title>
+      <link>https://cobaltspeech.github.io/sdk-luna/protobuf/autogen-doc-cubic-proto/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cobaltspeech.github.io/sdk-luna/protobuf/autogen-doc-cubic-proto/</guid>
+      <description>The Luna API is specified as a proto file. This section of the documentation is auto-generated from the spec. It describes the data types and functions defined in the spec. The &amp;ldquo;messages&amp;rdquo; below correspond to the data structures to be used, and the &amp;ldquo;service&amp;rdquo; contains the methods that can be called.
+luna.proto Service: Luna Service that implements the Cobalt Luna Text-to-Speech API
+   Method Name Request Type Response Type Description     Version VersionRequest VersionResponse Queries the Version of the Server   ListVoices ListVoicesRequest ListVoicesResponse Retrieves a list of available text-to-speech voices   Synthesize SynthesizeRequest SynthesizeResponse Performs synchronous text-to-speech generation.</description>
+    </item>
+    
+  </channel>
+</rss>
