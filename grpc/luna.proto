@@ -4,19 +4,23 @@ syntax = "proto3";
 
 package cobaltspeech.luna;
 
-option go_package="lunapb";
+option go_package = "lunapb";
 
 // Service that implements the Cobalt Luna Text-to-Speech API
 service Luna {
 
-  // Queries the Version of the Server
+  // Queries the Version of the Server.
   rpc Version (VersionRequest) returns (VersionResponse);
 
-  // Retrieves a list of available text-to-speech voices
+  // Retrieves a list of available text-to-speech voices.
   rpc ListVoices (ListVoicesRequest) returns (ListVoicesResponse);
 
   // Performs synchronous text-to-speech generation.
   rpc Synthesize (SynthesizeRequest) returns (SynthesizeResponse);
+
+  // Performs streaming text-to-speech generation, where the synthesized
+  // speech is streamed to the client as it is being generated.
+  rpc SynthesizeStream (SynthesizeRequest) returns (stream SynthesizeResponse);
 }
 
 // The top-level message sent by the client for the `Version` method.
@@ -25,7 +29,8 @@ message VersionRequest {}
 // The top-level message sent by the client for the `ListVoices` method.
 message ListVoicesRequest {}
 
-// The top-level message sent by the client for the `Synthesize` method.
+// The top-level message sent by the client for the `Synthesize` and
+// `SynthesizeStream` methods.
 message SynthesizeRequest {
   // Provides configuration for the text-to-speech engine.
   SynthesizerConfig config = 1;
@@ -63,8 +68,10 @@ message Voice {
   string name = 2;
 }
 
-// The message returned to the client by the `Synthesize` method.
+// The message returned to the client by the `Synthesize` and
+// `SynthesizeStream` methods.
 message SynthesizeResponse {
-  // Audio samples of the entire generated speech, in the 32-bit float encoding, single channel, sampled at 48KHz.
+  // Audio samples of the entire generated speech, in the 32-bit float encoding, 
+  // single channel, sampled at 48KHz.
   repeated float samples = 1;
 }
