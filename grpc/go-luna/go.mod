@@ -1,7 +1,6 @@
 module github.com/cobaltspeech/sdk-luna/grpc/go-luna
 
 require (
-	github.com/golang/protobuf v1.2.0
-	golang.org/x/net v0.0.0-20180826012351-8a410e7b638d
+	github.com/golang/protobuf v1.3.0
 	google.golang.org/grpc v1.18.0
 )

@@ -26,9 +26,10 @@ Service that implements the Cobalt Luna Text-to-Speech API
 
 | Method Name | Request Type | Response Type | Description |
 | ----------- | ------------ | ------------- | ------------|
-| Version | VersionRequest | VersionResponse | Queries the Version of the Server |
-| ListVoices | ListVoicesRequest | ListVoicesResponse | Retrieves a list of available text-to-speech voices |
+| Version | VersionRequest | VersionResponse | Queries the Version of the Server. |
+| ListVoices | ListVoicesRequest | ListVoicesResponse | Retrieves a list of available text-to-speech voices. |
 | Synthesize | SynthesizeRequest | SynthesizeResponse | Performs synchronous text-to-speech generation. |
+| SynthesizeStream | SynthesizeRequest | SynthesizeResponse | Performs streaming text-to-speech generation, where the synthesized speech is streamed to the client as it is being generated. |
 
  <!-- end services -->
 
@@ -60,7 +61,8 @@ The message sent by the server for the `ListVoices` method.
 
 
 ### Message: SynthesizeRequest
-The top-level message sent by the client for the `Synthesize` method.
+The top-level message sent by the client for the `Synthesize` and
+`SynthesizeStream` methods.
 
 
 | Field | Type | Label | Description |
@@ -75,7 +77,8 @@ The top-level message sent by the client for the `Synthesize` method.
 
 
 ### Message: SynthesizeResponse
-The message returned to the client by the `Synthesize` method.
+The message returned to the client by the `Synthesize` and
+`SynthesizeStream` methods.
 
 
 | Field | Type | Label | Description |
