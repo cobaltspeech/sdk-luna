@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<meta name="generator" content="Hugo 0.54.0" />
+	<meta name="generator" content="Hugo 0.55.6" />
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -256,14 +256,14 @@ methods that can be called.</p>
 <td>Version</td>
 <td>VersionRequest</td>
 <td>VersionResponse</td>
-<td>Queries the Version of the Server</td>
+<td>Queries the Version of the Server.</td>
 </tr>
 
 <tr>
 <td>ListVoices</td>
 <td>ListVoicesRequest</td>
 <td>ListVoicesResponse</td>
-<td>Retrieves a list of available text-to-speech voices</td>
+<td>Retrieves a list of available text-to-speech voices.</td>
 </tr>
 
 <tr>
@@ -271,6 +271,13 @@ methods that can be called.</p>
 <td>SynthesizeRequest</td>
 <td>SynthesizeResponse</td>
 <td>Performs synchronous text-to-speech generation.</td>
+</tr>
+
+<tr>
+<td>SynthesizeStream</td>
+<td>SynthesizeRequest</td>
+<td>SynthesizeResponse</td>
+<td>Performs streaming text-to-speech generation, where the synthesized speech is streamed to the client as it is being generated.</td>
 </tr>
 </tbody>
 </table>
@@ -309,7 +316,8 @@ methods that can be called.</p>
 
 <h3 id="message-synthesizerequest">Message: SynthesizeRequest</h3>
 
-<p>The top-level message sent by the client for the <code>Synthesize</code> method.</p>
+<p>The top-level message sent by the client for the <code>Synthesize</code> and
+<code>SynthesizeStream</code> methods.</p>
 
 <table>
 <thead>
@@ -340,7 +348,8 @@ methods that can be called.</p>
 
 <h3 id="message-synthesizeresponse">Message: SynthesizeResponse</h3>
 
-<p>The message returned to the client by the <code>Synthesize</code> method.</p>
+<p>The message returned to the client by the <code>Synthesize</code> and
+<code>SynthesizeStream</code> methods.</p>
 
 <table>
 <thead>
