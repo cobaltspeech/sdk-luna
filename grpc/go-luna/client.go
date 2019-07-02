@@ -93,3 +93,11 @@ func (c *Client) ListVoices(ctx context.Context) (*lunapb.ListVoicesResponse, er
 func (c *Client) Synthesize(ctx context.Context, r *lunapb.SynthesizeRequest) (*lunapb.SynthesizeResponse, error) {
 	return c.client.Synthesize(ctx, r)
 }
+
+// SynthesizeStream requests text-to-speech from the server for the given text and
+// returns a stream that receives audio samples as they are generated. The stream
+// will close once synthesis has finished.
+func (c *Client) SynthesizeStream(ctx context.Context, in *lunapb.SynthesizeRequest) (lunapb.Luna_SynthesizeStreamClient, error) {
+	return c.client.SynthesizeStream(ctx, in)
+}
+

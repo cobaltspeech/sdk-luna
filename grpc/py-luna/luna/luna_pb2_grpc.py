@@ -29,6 +29,11 @@ class LunaStub(object):
         request_serializer=luna__pb2.SynthesizeRequest.SerializeToString,
         response_deserializer=luna__pb2.SynthesizeResponse.FromString,
         )
+    self.SynthesizeStream = channel.unary_stream(
+        '/cobaltspeech.luna.Luna/SynthesizeStream',
+        request_serializer=luna__pb2.SynthesizeRequest.SerializeToString,
+        response_deserializer=luna__pb2.SynthesizeResponse.FromString,
+        )
 
 
 class LunaServicer(object):
@@ -36,14 +41,14 @@ class LunaServicer(object):
   """
 
   def Version(self, request, context):
-    """Queries the Version of the Server
+    """Queries the Version of the Server.
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
   def ListVoices(self, request, context):
-    """Retrieves a list of available text-to-speech voices
+    """Retrieves a list of available text-to-speech voices.
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
@@ -51,6 +56,14 @@ class LunaServicer(object):
 
   def Synthesize(self, request, context):
     """Performs synchronous text-to-speech generation.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def SynthesizeStream(self, request, context):
+    """Performs streaming text-to-speech generation, where the synthesized
+    speech is streamed to the client as it is being generated.
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
@@ -71,6 +84,11 @@ def add_LunaServicer_to_server(servicer, server):
       ),
       'Synthesize': grpc.unary_unary_rpc_method_handler(
           servicer.Synthesize,
+          request_deserializer=luna__pb2.SynthesizeRequest.FromString,
+          response_serializer=luna__pb2.SynthesizeResponse.SerializeToString,
+      ),
+      'SynthesizeStream': grpc.unary_stream_rpc_method_handler(
+          servicer.SynthesizeStream,
           request_deserializer=luna__pb2.SynthesizeRequest.FromString,
           response_serializer=luna__pb2.SynthesizeResponse.SerializeToString,
       ),
