@@ -73,3 +73,14 @@ will be validated by the server, thus providing mutually-authenticated TLS.
         req: luna_pb2.SynthesizeRequest object containing appropriate parameters
         """
         return self.client.Synthesize(req)
+
+    def SynthesizeStream(self, req):
+        """Request the server to perform streaming text-to-speech using the given request.
+        Returns a gRPC streaming object that works similar to sequence types (i.e., can
+        be read in a for loop).
+
+        Args:
+        req: luna_pb2.SynthesizeRequest object
+        """
+        return self.client.SynthesizeStream(req)
+
