@@ -8,8 +8,8 @@ luna.proto file.
 ## CMake Build
 To help simplify the build process, this project uses
 [CMake](www.cmake.org). CMake will automatically download
-the grpc source code and include it as a subproject, giving
-access to the grpc libraries and the protoc compiler.
+the gRPC source code and include it as a subproject, giving
+access to the gRPC libraries and the protoc compiler.
 
 To build as a standalone library execute the following
 commands:
@@ -18,7 +18,7 @@ commands:
 # can exist outside of the source code directory.
 mkdir build-luna-client && cd build-luna-client
 
-# Run CMake to download grpc and generate makefiles.
+# Run CMake to download gRPC and generate makefiles.
 # The final path specifies the directory that contains the
 # CMakeLists.txt file for the luna_client C++ project.
 cmake -DCMAKE_BUILD_TYPE=Release <path/to/sdk-luna/grpc/cpp-luna>
@@ -41,7 +41,7 @@ to your project's CMakeLists.txt.
 ## Build without CMake
 When building without CMake, you must manually build and install 
 gRPC as [described here](https://grpc.io/docs/quickstart/cpp/).
-Once that is done, generate the grpc/protobuf files by running
+Once that is done, generate the gRPC/protobuf files by running
 protoc:
 
 ```bash
@@ -64,4 +64,4 @@ $GRPC_INSTALL_DIR/bin/protoc \
 Once the files are generated, include them with the wrapper code
 from this directory in your project. Then be sure to link your
 binaries with libgrpc, libgrpc++, and libprotobuf (found in
-the grpc installation's `lib` directory).
+the gRPC installation's `lib` directory).
