@@ -20,12 +20,14 @@ mkdir build-luna-client && cd build-luna-client
 
 # Run CMake to download gRPC and generate makefiles.
 # The final path specifies the directory that contains the
-# CMakeLists.txt file for the luna_client C++ project.
+# CMakeLists.txt file for the luna_client C++ project. By
+# default this will create static libraries. To make a shared
+# library instead, add -DBUILD_SHARED_LIBS=TRUE
 cmake -DCMAKE_BUILD_TYPE=Release <path/to/sdk-luna/grpc/cpp-luna>
-make luna_client
-
-# To make a shared library, add -DBUILD_SHARED_LIBS=TRUE when running cmake
+# OR
 cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=TRUE <path/to/sdk-luna/grpc/cpp-luna>
+
+# Build the library
 make luna_client
 ```
 
