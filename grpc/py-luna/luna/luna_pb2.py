@@ -20,10 +20,32 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='cobaltspeech.luna',
   syntax='proto3',
   serialized_options=_b('Z\006lunapb'),
-  serialized_pb=_b('\n\nluna.proto\x12\x11\x63obaltspeech.luna\"\x10\n\x0eVersionRequest\"\x13\n\x11ListVoicesRequest\"W\n\x11SynthesizeRequest\x12\x34\n\x06\x63onfig\x18\x01 \x01(\x0b\x32$.cobaltspeech.luna.SynthesizerConfig\x12\x0c\n\x04text\x18\x02 \x01(\t\"%\n\x11SynthesizerConfig\x12\x10\n\x08voice_id\x18\x01 \x01(\t\"\"\n\x0fVersionResponse\x12\x0f\n\x07version\x18\x01 \x01(\t\">\n\x12ListVoicesResponse\x12(\n\x06voices\x18\x01 \x03(\x0b\x32\x18.cobaltspeech.luna.Voice\"!\n\x05Voice\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"%\n\x12SynthesizeResponse\x12\x0f\n\x07samples\x18\x01 \x03(\x02\x32\xf1\x02\n\x04Luna\x12P\n\x07Version\x12!.cobaltspeech.luna.VersionRequest\x1a\".cobaltspeech.luna.VersionResponse\x12Y\n\nListVoices\x12$.cobaltspeech.luna.ListVoicesRequest\x1a%.cobaltspeech.luna.ListVoicesResponse\x12Y\n\nSynthesize\x12$.cobaltspeech.luna.SynthesizeRequest\x1a%.cobaltspeech.luna.SynthesizeResponse\x12\x61\n\x10SynthesizeStream\x12$.cobaltspeech.luna.SynthesizeRequest\x1a%.cobaltspeech.luna.SynthesizeResponse0\x01\x42\x08Z\x06lunapbb\x06proto3')
+  serialized_pb=_b('\n\nluna.proto\x12\x11\x63obaltspeech.luna\"\x10\n\x0eVersionRequest\"\x13\n\x11ListVoicesRequest\"W\n\x11SynthesizeRequest\x12\x34\n\x06\x63onfig\x18\x01 \x01(\x0b\x32$.cobaltspeech.luna.SynthesizerConfig\x12\x0c\n\x04text\x18\x02 \x01(\t\"\xb2\x01\n\x11SynthesizerConfig\x12\x10\n\x08voice_id\x18\x01 \x01(\t\x12\x44\n\x08\x65ncoding\x18\x02 \x01(\x0e\x32\x32.cobaltspeech.luna.SynthesizerConfig.AudioEncoding\x12\x11\n\tn_samples\x18\x03 \x01(\x04\"2\n\rAudioEncoding\x12\x10\n\x0cRAW_LINEAR16\x10\x00\x12\x0f\n\x0bRAW_FLOAT32\x10\x01\"\"\n\x0fVersionResponse\x12\x0f\n\x07version\x18\x01 \x01(\t\">\n\x12ListVoicesResponse\x12(\n\x06voices\x18\x01 \x03(\x0b\x32\x18.cobaltspeech.luna.Voice\"!\n\x05Voice\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"#\n\x12SynthesizeResponse\x12\r\n\x05\x61udio\x18\x01 \x01(\x0c\x32\xf1\x02\n\x04Luna\x12P\n\x07Version\x12!.cobaltspeech.luna.VersionRequest\x1a\".cobaltspeech.luna.VersionResponse\x12Y\n\nListVoices\x12$.cobaltspeech.luna.ListVoicesRequest\x1a%.cobaltspeech.luna.ListVoicesResponse\x12Y\n\nSynthesize\x12$.cobaltspeech.luna.SynthesizeRequest\x1a%.cobaltspeech.luna.SynthesizeResponse\x12\x61\n\x10SynthesizeStream\x12$.cobaltspeech.luna.SynthesizeRequest\x1a%.cobaltspeech.luna.SynthesizeResponse0\x01\x42\x08Z\x06lunapbb\x06proto3')
 )
 
 
+
+_SYNTHESIZERCONFIG_AUDIOENCODING = _descriptor.EnumDescriptor(
+  name='AudioEncoding',
+  full_name='cobaltspeech.luna.SynthesizerConfig.AudioEncoding',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='RAW_LINEAR16', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RAW_FLOAT32', index=1, number=1,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=290,
+  serialized_end=340,
+)
+_sym_db.RegisterEnumDescriptor(_SYNTHESIZERCONFIG_AUDIOENCODING)
 
 
 _VERSIONREQUEST = _descriptor.Descriptor(
@@ -126,11 +148,26 @@ _SYNTHESIZERCONFIG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='encoding', full_name='cobaltspeech.luna.SynthesizerConfig.encoding', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='n_samples', full_name='cobaltspeech.luna.SynthesizerConfig.n_samples', index=2,
+      number=3, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
+    _SYNTHESIZERCONFIG_AUDIOENCODING,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -138,8 +175,8 @@ _SYNTHESIZERCONFIG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=161,
-  serialized_end=198,
+  serialized_start=162,
+  serialized_end=340,
 )
 
 
@@ -169,8 +206,8 @@ _VERSIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=200,
-  serialized_end=234,
+  serialized_start=342,
+  serialized_end=376,
 )
 
 
@@ -200,8 +237,8 @@ _LISTVOICESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=236,
-  serialized_end=298,
+  serialized_start=378,
+  serialized_end=440,
 )
 
 
@@ -238,8 +275,8 @@ _VOICE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=300,
-  serialized_end=333,
+  serialized_start=442,
+  serialized_end=475,
 )
 
 
@@ -251,9 +288,9 @@ _SYNTHESIZERESPONSE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='samples', full_name='cobaltspeech.luna.SynthesizeResponse.samples', index=0,
-      number=1, type=2, cpp_type=6, label=3,
-      has_default_value=False, default_value=[],
+      name='audio', full_name='cobaltspeech.luna.SynthesizeResponse.audio', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -269,11 +306,13 @@ _SYNTHESIZERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=335,
-  serialized_end=372,
+  serialized_start=477,
+  serialized_end=512,
 )
 
 _SYNTHESIZEREQUEST.fields_by_name['config'].message_type = _SYNTHESIZERCONFIG
+_SYNTHESIZERCONFIG.fields_by_name['encoding'].enum_type = _SYNTHESIZERCONFIG_AUDIOENCODING
+_SYNTHESIZERCONFIG_AUDIOENCODING.containing_type = _SYNTHESIZERCONFIG
 _LISTVOICESRESPONSE.fields_by_name['voices'].message_type = _VOICE
 DESCRIPTOR.message_types_by_name['VersionRequest'] = _VERSIONREQUEST
 DESCRIPTOR.message_types_by_name['ListVoicesRequest'] = _LISTVOICESREQUEST
@@ -350,8 +389,8 @@ _LUNA = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=375,
-  serialized_end=744,
+  serialized_start=515,
+  serialized_end=884,
   methods=[
   _descriptor.MethodDescriptor(
     name='Version',

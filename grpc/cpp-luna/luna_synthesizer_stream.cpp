@@ -4,28 +4,25 @@
 
 #include "luna_exception.h"
 
-LunaSynthesizerStream::LunaSynthesizerStream(const LunaReader &reader,
-                                             const std::shared_ptr<grpc::ClientContext> &ctx) :
-    mReader(reader),
-    mCtx(ctx)
-{}
+LunaSynthesizerStream::LunaSynthesizerStream(
+    const LunaReader &reader, const std::shared_ptr<grpc::ClientContext> &ctx)
+    : mReader(reader), mCtx(ctx)
+{
+}
 
-LunaSynthesizerStream::~LunaSynthesizerStream()
-{}
+LunaSynthesizerStream::~LunaSynthesizerStream() {}
 
-bool LunaSynthesizerStream::receiveSamples(std::vector<float> &samples)
+bool LunaSynthesizerStream::receiveAudio(ByteVector &audio)
 {
     cobaltspeech::luna::SynthesizeResponse response;
     bool streamOpen = mReader->Read(&response);
-    if(!streamOpen)
+    if (!streamOpen)
     {
-        samples.clear();
+        audio.clear();
         return false;
     }
 
-    samples.resize(response.samples_size());
-    for(int i = 0; i < response.samples_size(); i++)
-        samples[i] = response.samples(i);
+    audio.assign(response.audio().begin(), response.audio().end());
 
     return true;
 }
@@ -33,7 +30,6 @@ bool LunaSynthesizerStream::receiveSamples(std::vector<float> &samples)
 void LunaSynthesizerStream::close()
 {
     grpc::Status status = mReader->Finish();
-    if(!status.ok())
+    if (!status.ok())
         throw LunaException(status);
 }
-

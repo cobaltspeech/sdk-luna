@@ -86,7 +86,7 @@ func (c *Client) Version(ctx context.Context) (*lunapb.VersionResponse, error) {
 
 // ListVoices retrieves a list of configured voices on the server.
 func (c *Client) ListVoices(ctx context.Context) (*lunapb.ListVoicesResponse, error) {
-	return c.ListVoices(ctx)
+	return c.client.ListVoices(ctx, &lunapb.ListVoicesRequest{})
 }
 
 // Synthesize requests text-to-speech from the server for the given text
@@ -100,4 +100,3 @@ func (c *Client) Synthesize(ctx context.Context, r *lunapb.SynthesizeRequest) (*
 func (c *Client) SynthesizeStream(ctx context.Context, in *lunapb.SynthesizeRequest) (lunapb.Luna_SynthesizeStreamClient, error) {
 	return c.client.SynthesizeStream(ctx, in)
 }
-
