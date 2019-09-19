@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<meta name="generator" content="Hugo 0.55.6" />
+	<meta name="generator" content="Hugo 0.55.4" />
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -363,10 +363,10 @@ methods that can be called.</p>
 
 <tbody>
 <tr>
-<td>samples</td>
-<td>float</td>
-<td>repeated</td>
-<td>Audio samples of the entire generated speech, in the 32-bit float encoding, single channel, sampled at 48KHz.</td>
+<td>audio</td>
+<td>bytes</td>
+<td></td>
+<td>Audio samples of the generated speech</td>
 </tr>
 </tbody>
 </table>
@@ -391,6 +391,20 @@ methods that can be called.</p>
 <td>string</td>
 <td></td>
 <td></td>
+</tr>
+
+<tr>
+<td>encoding</td>
+<td>SynthesizerConfig.AudioEncoding</td>
+<td></td>
+<td>Encoding of the synthesized speech. If not specified, defaults to RAW_FLOAT32.</td>
+</tr>
+
+<tr>
+<td>n_samples</td>
+<td>uint64</td>
+<td></td>
+<td>Optional field for streaming synthesis. If not zero, waits until n_samples are generated before sending the audio data to the client. In the case that the entire generated audio is less than n_samples, the samples will be returned when synthesis is complete.</td>
 </tr>
 </tbody>
 </table>
@@ -457,6 +471,35 @@ methods that can be called.</p>
 </table>
 
 <p><!-- end messages --></p>
+
+<h3 id="enum-synthesizerconfig-audioencoding">Enum: SynthesizerConfig.AudioEncoding</h3>
+
+<p>Supported audio encodings. Unless otherwise noted, the sample rate is
+defined by the voice model.</p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Number</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>RAW_LINEAR16</td>
+<td>0</td>
+<td>Raw (headerless) uncompressed 16-bit signed little endian samples (linear PCM), single channel.</td>
+</tr>
+
+<tr>
+<td>RAW_FLOAT32</td>
+<td>1</td>
+<td>Raw (headerless) uncompressed 32-bit floating-point little endian samples (PCM), single channel.</td>
+</tr>
+</tbody>
+</table>
 
 <p><!-- end enums --></p>
 

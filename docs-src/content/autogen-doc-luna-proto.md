@@ -83,7 +83,7 @@ The message returned to the client by the `Synthesize` and
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| samples | float | repeated | Audio samples of the entire generated speech, in the 32-bit float encoding, single channel, sampled at 48KHz. |
+| audio | bytes |  | Audio samples of the generated speech |
 
 
 
@@ -98,6 +98,8 @@ Configuration for setting up the text-to-speech engine.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | voice_id | string |  |  |
+| encoding | SynthesizerConfig.AudioEncoding |  | Encoding of the synthesized speech. If not specified, defaults to RAW_FLOAT32. |
+| n_samples | uint64 |  | Optional field for streaming synthesis. If not zero, waits until n_samples are generated before sending the audio data to the client. In the case that the entire generated audio is less than n_samples, the samples will be returned when synthesis is complete. |
 
 
 
@@ -144,6 +146,18 @@ Description of a Luna Voice
 
 
  <!-- end messages -->
+
+
+
+### Enum: SynthesizerConfig.AudioEncoding
+Supported audio encodings. Unless otherwise noted, the sample rate is
+defined by the voice model.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| RAW_LINEAR16 | 0 | Raw (headerless) uncompressed 16-bit signed little endian samples (linear PCM), single channel. |
+| RAW_FLOAT32 | 1 | Raw (headerless) uncompressed 32-bit floating-point little endian samples (PCM), single channel. |
+
 
  <!-- end enums -->
 
