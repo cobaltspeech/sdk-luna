@@ -22,9 +22,13 @@ LunaClient::LunaClient(const std::string &url, bool secureConnection)
     // Setup credentials
     std::shared_ptr<grpc::ChannelCredentials> creds;
     if (secureConnection)
+    {
         creds = grpc::SslCredentials(grpc::SslCredentialsOptions());
+    }
     else
+    {
         creds = grpc::InsecureChannelCredentials();
+    }
 
     // Create the channel and stub
     std::unique_ptr<cobaltspeech::luna::Luna::Stub> tmpStub =
@@ -68,7 +72,9 @@ std::vector<LunaVoice> LunaClient::listVoices()
         this->setContextDeadline(ctx);
         grpc::Status status = mStub->ListVoices(&ctx, request, &response);
         if (!status.ok())
+        {
             throw LunaException(status);
+        }
 
         // Cache the voices
         for (int i = 0; i < response.voices_size(); i++)
@@ -96,7 +102,9 @@ LunaClient::synthesize(const cobaltspeech::luna::SynthesizerConfig &config,
 
     grpc::Status status = mStub->Synthesize(&ctx, request, &response);
     if (!status.ok())
+    {
         throw LunaException(status);
+    }
 
     ByteVector audio(response.audio().begin(), response.audio().end());
 
