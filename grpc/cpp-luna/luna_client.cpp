@@ -51,7 +51,9 @@ const std::string &LunaClient::lunaVersion()
         this->setContextDeadline(ctx);
         grpc::Status status = mStub->Version(&ctx, request, &response);
         if (!status.ok())
+        {
             throw LunaException(status);
+        }
 
         mLunaVersion = response.version();
     }
