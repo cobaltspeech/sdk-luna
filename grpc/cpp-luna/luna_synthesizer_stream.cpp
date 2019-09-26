@@ -31,5 +31,7 @@ void LunaSynthesizerStream::close()
 {
     grpc::Status status = mReader->Finish();
     if (!status.ok())
+    {
         throw LunaException(status);
+    }
 }
