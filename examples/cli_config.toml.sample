@@ -1,0 +1,27 @@
+# Specify whether to use streaming synthesis (set to
+# false to do batch synthesis). Batch synthesis is usually
+# slower to start playing because the client must wait for
+# all the audio samples to be generated first.
+Streaming = true
+
+# Specify the Luna server connection
+[Server]
+    # Specify the address as "<url>:<port>"
+    Address = "localhost:8001"
+    
+    # Set to true if the server is running without a
+    # secure (TLS) connection (not recommended for
+    # production environments).
+    Insecure = true
+
+    # Specify the voice model to use.
+    VoiceID = "1"
+
+# Specify an executable to handle audio playback.
+# The playback app should accept audio data from
+# stdin.
+[Playback]
+    # sox example (see http://sox.sourceforge.net/)
+    Application = "sox"
+    #Args = "-q -c 1 -r 16000 -b 32 -L -e floating-point -t raw - -d"
+    Args = "-q -c 1 -r 16000 -b 16 -L -e signed -t raw - -d"
