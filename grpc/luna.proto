@@ -93,6 +93,7 @@ message Voice {
 // The message returned to the client by the `Synthesize` and
 // `SynthesizeStream` methods.
 message SynthesizeResponse {
-  // Audio samples of the generated speech
+  // Audio samples of the generated speech. The samples will have the encoding
+  // specified in the SynthesizerConfig.AudioEncoding field of the request.
   bytes audio = 1;
 }
