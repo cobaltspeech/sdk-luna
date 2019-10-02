@@ -69,9 +69,10 @@ bool parseCLIArgs(int argc, char *argv[], std::string &configFile)
 }
 
 void synthesizeBatch(const std::string &userInput, LunaClient &client,
-                     cobaltspeech::luna::SynthesizerConfig synthConfig,
-                     Player player)
+                     const cobaltspeech::luna::SynthesizerConfig &synthConfig,
+                     const std::string &playbackCmd)
 {
+    Player player(playbackCmd);
     Timer timer;
 
     // Call the batch synthesis method
@@ -94,9 +95,10 @@ void synthesizeBatch(const std::string &userInput, LunaClient &client,
 }
 
 void synthesizeStream(const std::string &userInput, LunaClient &client,
-                      cobaltspeech::luna::SynthesizerConfig synthConfig,
-                      Player player)
+                      const cobaltspeech::luna::SynthesizerConfig &synthConfig,
+                      const std::string &playbackCmd)
 {
+    Player player(playbackCmd);
     Timer timer;
 
     // Start the player application
@@ -182,9 +184,6 @@ int main(int argc, char *argv[])
     synthConfig.set_encoding(
         cobaltspeech::luna::SynthesizerConfig::RAW_LINEAR16);
 
-    // Setup the playback application
-    Player player(config.playbackCmd());
-
     // Start the main loop
     std::cout << "Enter text to synthesize at the prompt. ";
     std::cout << "To exit, use Ctrl+D.\n" << std::endl;
@@ -207,11 +206,13 @@ int main(int argc, char *argv[])
         // Synthesize the text
         if (config.streaming())
         {
-            synthesizeStream(userInput, client, synthConfig, player);
+            synthesizeStream(userInput, client, synthConfig,
+                             config.playbackCmd());
         }
         else
         {
-            synthesizeBatch(userInput, client, synthConfig, player);
+            synthesizeBatch(userInput, client, synthConfig,
+                            config.playbackCmd());
         }
     }
 
