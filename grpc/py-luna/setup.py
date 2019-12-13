@@ -4,16 +4,16 @@
 from setuptools import setup
 
 setup(
-    name='luna',
+    name='cobalt-luna',
     python_requires='>=3.5.0',
-    description='This client library is designed to support the Cobalt API for speech synthesis with Luna',
+    description='Client SDK library for Cobalt\'s Luna engine.',
     author='Cobalt Speech and Language Inc.',
-    maintainer_email='tech@cobaltspeech.com',
+    author_email='tech@cobaltspeech.com',
     url='https://github.com/cobaltspeech/sdk-luna',
     packages=["luna"],
-    version_format='{tag}.dev{commits}+{sha}',
-    setup_requires=['setuptools-git-version'],
-    install_requires=[
-        'grpcio-tools'
-    ]
+    version_config={
+        "version_format": "{tag}.dev{sha}"
+    },
+    setup_requires=['better-setuptools-git-version'],
+    install_requires=['grpcio-tools']
 )
