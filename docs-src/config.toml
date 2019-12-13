@@ -1,43 +1,40 @@
 baseURL = "https://cobaltspeech.github.io/sdk-luna"
 languageCode = "en-us"
-title = "Luna SDK Documentation -- Cobalt Speech"
-theme = "docuapi"
-
-
-# Code higlighting settings
-pygmentsCodefences = true
-pygmentsCodeFencesGuesSsyntax = false
-pygmentsOptions = ""
-pygmentsStyle = "monokai"
-# The monokai stylesheet is included in the base template.
-pygmentsUseClasses = true
+DefaultContentLanguage = "en"
+title = "Luna SDK -- Cobalt"
+theme = "docdock"
+pygmentsCodeFences = true
+pygmentsStyle = "native"
 
 defaultContentLanguage = "en"
+defaultContentLanguageInSubdir= false
+enableMissingTranslationPlaceholders = false
 
 [params]
-search = false
+showVisitedLinks = true # default is false
+themeStyle = "original" # "original" or "flex" # default "flex"
+themeVariant = "blue" # choose theme variant "green", "gold" , "gray", "blue" (default)
+ordersectionsby = "weight" # ordersectionsby = "title"
+disableHomeIcon = false # default is false
+disableSearch = false # default is false
+disableNavChevron = false # set true to hide next/prev chevron, default is false
+highlightClientSide = false # set true to use highlight.pack.js instead of the default hugo chroma highlighter
+menushortcutsnewtab = false # set true to open shortcuts links to a new tab/window
+enableGitInfo = false
 
-# Configure the language example tabs.
-[[params.language_tabs]]
-key = "go"
-name = "Go"
-[[params.language_tabs]]
-key = "python"
-name = "Python"
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
 
-#Languages
-[languages]
 
-[languages.en]
-languageName = "English"
-weight = 2
-title = "Luna SDK Documentation"
+[[menu.shortcuts]]
+pre = "<h3>More</h3>"
+name = "<i class='fa fa-github'></i> <label>Github repo</label>"
+identifier = "gh"
+url = "https://github.com/cobaltspeech/sdk-luna"
+weight = 10
 
-# Left sidebar footer items. Use HTMl or Markdown.
-toc_footers = [
-"<a href='https://www.cobaltspeech.com/contact'>Contact us</a>",
-]
-
-[languages.en.blackfriday]
-angledQuotes = false
-hrefTargetBlank = true
+[[menu.shortcuts]]
+name = "<i class='fa fa-bookmark'></i> <label>Contact us</label>"
+identifier = "contactus"
+url = "https://www.cobaltspeech.com/contact"
+weight = 20
