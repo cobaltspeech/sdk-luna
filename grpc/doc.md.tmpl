@@ -1,14 +1,13 @@
 ---
-title: "API Specification"
+title: "Luna API Reference"
 draft: false
-weight: 100
+weight: 1000
 ---
 
-# API Specification
-
-The Luna API is specified as a [proto file](https://github.com/cobaltspeech/sdk-luna/blob/master/grpc/luna.proto).
-This section of the documentation is auto-generated from the spec.  It describes
-the data types and functions defined in the spec. The "messages" below
+The Luna API is defined using [gRPC and protocol buffers](https://grpc.io/docs/guides/).
+This section of the documentation is auto-generated from the 
+[protobuf file](https://github.com/cobaltspeech/sdk-luna/blob/master/grpc/luna.proto).
+It describes the data types and functions defined in the spec. The "messages" below
 correspond to the data structures to be used, and the "service" contains the
 methods that can be called.
 
@@ -84,9 +83,9 @@ This message is empty and has no fields.
 
 ## Scalar Value Types
 
-| .proto Type | Notes | Go Type | Python Type |
-| ----------- | ----- | ------- | ----------- |
+| .proto Type | Notes | Go Type | Python Type | C++ Type |
+| ----------- | ----- | ------- | ----------- | -------- |
 {{range .Scalars -}}
-  | {{.ProtoType}} | {{.Notes}} | {{.GoType}} | {{.PythonType}} |
+  | {{.ProtoType}} | {{.Notes}} | {{.GoType}} | {{.PythonType}} | {{.CppType}} |
 {{end}}
 
