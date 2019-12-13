@@ -1,14 +1,13 @@
 ---
-title: "API Specification"
+title: "Luna API Reference"
 draft: false
-weight: 100
+weight: 1000
 ---
 
-# API Specification
-
-The Luna API is specified as a [proto file](https://github.com/cobaltspeech/sdk-luna/blob/master/grpc/luna.proto).
-This section of the documentation is auto-generated from the spec.  It describes
-the data types and functions defined in the spec. The "messages" below
+The Luna API is defined using [gRPC and protocol buffers](https://grpc.io/docs/guides/).
+This section of the documentation is auto-generated from the 
+[protobuf file](https://github.com/cobaltspeech/sdk-luna/blob/master/grpc/luna.proto).
+It describes the data types and functions defined in the spec. The "messages" below
 correspond to the data structures to be used, and the "service" contains the
 methods that can be called.
 
@@ -83,7 +82,7 @@ The message returned to the client by the `Synthesize` and
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| audio | bytes |  | Audio samples of the generated speech |
+| audio | bytes |  | Audio samples of the generated speech. The samples will have the encoding specified in the SynthesizerConfig.AudioEncoding field of the request. |
 
 
 
@@ -168,22 +167,22 @@ defined by the voice model.
 
 ## Scalar Value Types
 
-| .proto Type | Notes | Go Type | Python Type |
-| ----------- | ----- | ------- | ----------- |
-| double |  | float64 | float |
-| float |  | float32 | float |
-| int32 | Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint32 instead. | int32 | int |
-| int64 | Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint64 instead. | int64 | int/long |
-| uint32 | Uses variable-length encoding. | uint32 | int/long |
-| uint64 | Uses variable-length encoding. | uint64 | int/long |
-| sint32 | Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int32s. | int32 | int |
-| sint64 | Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int64s. | int64 | int/long |
-| fixed32 | Always four bytes. More efficient than uint32 if values are often greater than 2^28. | uint32 | int |
-| fixed64 | Always eight bytes. More efficient than uint64 if values are often greater than 2^56. | uint64 | int/long |
-| sfixed32 | Always four bytes. | int32 | int |
-| sfixed64 | Always eight bytes. | int64 | int/long |
-| bool |  | bool | boolean |
-| string | A string must always contain UTF-8 encoded or 7-bit ASCII text. | string | str/unicode |
-| bytes | May contain any arbitrary sequence of bytes. | []byte | str |
+| .proto Type | Notes | Go Type | Python Type | C++ Type |
+| ----------- | ----- | ------- | ----------- | -------- |
+| double |  | float64 | float | double |
+| float |  | float32 | float | float |
+| int32 | Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint32 instead. | int32 | int | int32 |
+| int64 | Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint64 instead. | int64 | int/long | int64 |
+| uint32 | Uses variable-length encoding. | uint32 | int/long | uint32 |
+| uint64 | Uses variable-length encoding. | uint64 | int/long | uint64 |
+| sint32 | Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int32s. | int32 | int | int32 |
+| sint64 | Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int64s. | int64 | int/long | int64 |
+| fixed32 | Always four bytes. More efficient than uint32 if values are often greater than 2^28. | uint32 | int | uint32 |
+| fixed64 | Always eight bytes. More efficient than uint64 if values are often greater than 2^56. | uint64 | int/long | uint64 |
+| sfixed32 | Always four bytes. | int32 | int | int32 |
+| sfixed64 | Always eight bytes. | int64 | int/long | int64 |
+| bool |  | bool | boolean | bool |
+| string | A string must always contain UTF-8 encoded or 7-bit ASCII text. | string | str/unicode | string |
+| bytes | May contain any arbitrary sequence of bytes. | []byte | str | string |
 
 
