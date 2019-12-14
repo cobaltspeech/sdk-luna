@@ -3,23 +3,53 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://cobaltspeech.github.io/sdk-luna/main/</loc>
-    <lastmod>2019-02-13T12:56:41+05:30</lastmod>
+    <loc>https://cobaltspeech.github.io/sdk-luna/getting-started/</loc>
   </url>
   
   <url>
-    <loc>https://cobaltspeech.github.io/sdk-luna/autogen-doc-luna-proto/</loc>
+    <loc>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/</loc>
   </url>
   
   <url>
-    <loc>https://cobaltspeech.github.io/sdk-luna/</loc>
-    <lastmod>2019-02-13T12:56:41+05:30</lastmod>
+    <loc>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/include/</loc>
+  </url>
+  
+  <url>
+    <loc>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/errors/</loc>
+  </url>
+  
+  <url>
+    <loc>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/connecting/</loc>
+  </url>
+  
+  <url>
+    <loc>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/synthesis-config/</loc>
+  </url>
+  
+  <url>
+    <loc>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/batch/</loc>
+  </url>
+  
+  <url>
+    <loc>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/streaming/</loc>
+  </url>
+  
+  <url>
+    <loc>https://cobaltspeech.github.io/sdk-luna/protobuf/</loc>
+  </url>
+  
+  <url>
+    <loc>https://cobaltspeech.github.io/sdk-luna/_header/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cobaltspeech.github.io/sdk-luna/categories/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cobaltspeech.github.io/sdk-luna/</loc>
   </url>
   
   <url>

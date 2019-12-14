@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Using Luna SDK on Luna SDK -- Cobalt</title>
+    <link>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/</link>
+    <description>Recent content in Using Luna SDK on Luna SDK -- Cobalt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Including the SDK</title>
+      <link>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/include/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/include/</guid>
+      <description>Language-specific instructions to include the SDK in your project are given below.
+C++ To use the Luna SDK in a C++ project, you must first download the SDK from GitHub. To help simplify the build process, the C++ SDK uses CMake, although it is possible to use a different build system with some additional work. Details for building and including the SDK in a C++ project are described in detail in this README file.</description>
+    </item>
+    
+    <item>
+      <title>Error Handling</title>
+      <link>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/errors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/errors/</guid>
+      <description>For the sake of clarity, most examples in the documentation do not fully demonstrate how to handle errors, preferring instead to focus on the topic at hand. However, the Luna SDK does report errors, and client applications should be prepared to handle them.
+A description of how errors are handled for each language is given below.
+C++ The C++ SDK uses exceptions to report errors. Errors originating from the SDK will have the class type LunaException, which inherits from the std::exception class.</description>
+    </item>
+    
+    <item>
+      <title>Connecting to the Server</title>
+      <link>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/connecting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/connecting/</guid>
+      <description>&lt;p&gt;Once you have the Luna server &lt;a href=&#34;../../getting-started&#34;&gt;up and running&lt;/a&gt;,
+you are ready to create a client connection.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Synthesis Configuration</title>
+      <link>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/synthesis-config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/synthesis-config/</guid>
+      <description>Before we can run text-to-speech, the client needs to specify the configuration Luna should use to generate the audio. The Luna options include the specific voice model, the audio encoding, and the sample size.
+Voice ID Voice models are defined in the Luna server config file, and the client can get a list of available voice models using the ListVoices method.
+ // Get the list of voices from Luna response, err := client.</description>
+    </item>
+    
+    <item>
+      <title>Batch Synthesis</title>
+      <link>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/batch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/batch/</guid>
+      <description>Batch synthesis generates audio data from text and waits for synthesis to complete before returning any data to the client. Once synthesis has completed, all of the generated audio data is returned. The benefit of using this method is its simplicity - a client submits text and receives all the generated audio for the text. However, the downsides to this method include:
+ Slower response time - must wait for synthesis to complete before receiving audio.</description>
+    </item>
+    
+    <item>
+      <title>Streaming Synthesis</title>
+      <link>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/streaming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/streaming/</guid>
+      <description>Unlike batch synthesis, streaming synthesis begins to return the generated audio data to the client as soon as it is ready, sending multiple data packets until synthesis has completed. While this method is slightly more complex than batch synthesis, it brings the following benefits:
+ Faster response time - a client may begin to use data as soon as it receives. This allows a client to begin audio playback even before synthesis is complete.</description>
+    </item>
+    
+  </channel>
+</rss>
