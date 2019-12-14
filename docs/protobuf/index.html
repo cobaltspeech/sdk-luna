@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Luna SDK -- Cobalt</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Luna API Reference :: Luna SDK -- Cobalt</title>
+<link rel="shortcut icon" href="/sdk-luna/images/favicon.ico" type="image/x-icon" />
+<link href="/sdk-luna/css/nucleus.css" rel="stylesheet">
+<link href="/sdk-luna/css/font-awesome.min.css" rel="stylesheet">
+<link href="/sdk-luna/css/hybrid.css" rel="stylesheet">
+<link href="/sdk-luna/css/featherlight.min.css" rel="stylesheet">
+<link href="/sdk-luna/css/auto-complete.css" rel="stylesheet">
+<link href="/sdk-luna/theme-original/style.css" rel="stylesheet">
+
+  <link href="/sdk-luna/theme-original/variant-blue.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/sdk-luna/css/bootstrap.min.css">
+<script src="/sdk-luna/js/jquery-2.x.min.js"></script>
+<style type="text/css">
+  :root #header + #content > #left > #rlblock_left {
+    display:none !important;
+  }
+</style>
+<link href="/sdk-luna/css/tabs.css" rel="stylesheet" type="text/css">
+<script src="/sdk-luna/js/tabs.js"></script>
+
+
+    
+  </head>
+  <body data-url="/sdk-luna/protobuf/">
+    
+      <div id="headermain"></div>
+<nav id="sidebar" class="showVisitedLinks">
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+      
+	
+  
+    <p><img src="/sdk-luna/images/logo-white.png" alt="Cobalt's SDK Documentation" /></p>
+
+<p>Luna SDK &ndash; Cobalt</p>
+
+  
+
+
+    </div>
+        <div class="searchbox">
+		    <label for="search-by"><i class="fa fa-search"></i></label>
+		    <input data-search-input id="search-by" type="text" placeholder="Search...">
+		    <span data-search-clear=""><i class="fa fa-close"></i></span>
+		</div>
+		<script type="text/javascript" src="/sdk-luna/js/lunr.min.js"></script>
+		<script type="text/javascript" src="/sdk-luna/js/auto-complete.js"></script>
+		<script type="text/javascript">
+        
+            var baseurl = "https:\/\/cobaltspeech.github.io\/sdk-luna";
+        
+		</script>
+		<script type="text/javascript" src="/sdk-luna/js/search.js"></script>
+  </div>
+
+      <ul class="topics">
+            <li data-nav-id="/sdk-luna/" class="dd-item">
+            <a href="/sdk-luna/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+    <li data-nav-id="/sdk-luna/getting-started/" class="dd-item
+        ">
+      <div>
+      <a href="/sdk-luna/getting-started/">Getting Started</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sdk-luna/using-luna-sdk/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sdk-luna/using-luna-sdk/">Using Luna SDK</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sdk-luna/using-luna-sdk/include/" class="dd-item">
+        <div>
+          <a href="/sdk-luna/using-luna-sdk/include/">
+            Including the SDK
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sdk-luna/using-luna-sdk/errors/" class="dd-item">
+        <div>
+          <a href="/sdk-luna/using-luna-sdk/errors/">
+            Error Handling
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sdk-luna/using-luna-sdk/connecting/" class="dd-item">
+        <div>
+          <a href="/sdk-luna/using-luna-sdk/connecting/">
+            Connecting to the Server
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sdk-luna/using-luna-sdk/synthesis-config/" class="dd-item">
+        <div>
+          <a href="/sdk-luna/using-luna-sdk/synthesis-config/">
+            Synthesis Configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sdk-luna/using-luna-sdk/batch/" class="dd-item">
+        <div>
+          <a href="/sdk-luna/using-luna-sdk/batch/">
+            Batch Synthesis
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sdk-luna/using-luna-sdk/streaming/" class="dd-item">
+        <div>
+          <a href="/sdk-luna/using-luna-sdk/streaming/">
+            Streaming Synthesis
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sdk-luna/protobuf/" class="dd-item parent active
+        ">
+      <div>
+      <a href="/sdk-luna/protobuf/">Luna API Reference</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+        <section id="shortcuts">
+                <li class="" role=""><h3>More</h3><a href="https://github.com/cobaltspeech/sdk-luna" target="_blank" rel="noopener"><i class='fa fa-github'></i> <label>Github repo</label></a></li>
+                <li class="" role=""><a href="https://www.cobaltspeech.com/contact" target="_blank" rel="noopener"><i class='fa fa-bookmark'></i> <label>Contact us</label></a></li>
+        </section>
+            <a id="clear-history" class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+
+    <hr />
+    <li></li>
+    
+    </ul>
+
+ <section id="footer">
+    </section>
+  </div>
+</nav>
+
+
+
+<section id="body">
+<div id="overlay"></div>
+<div class="padding highlightable">
+
+  <div id="top-bar">
+    <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span id="sidebar-toggle-span">
+          <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        <span class="links">
+        
+
+
+
+
+ <a href='/sdk-luna/'>Luna SDK Documentation</a> > Luna API Reference
+
+ 
+
+   
+        </span>
+    </div>
+    
+    
+    <div class="progress">
+        <div class="wrapper">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#luna-proto">luna.proto</a>
+<ul>
+<li><a href="#service-luna">Service: Luna</a></li>
+<li><a href="#message-listvoicesrequest">Message: ListVoicesRequest</a></li>
+<li><a href="#message-listvoicesresponse">Message: ListVoicesResponse</a></li>
+<li><a href="#message-synthesizerequest">Message: SynthesizeRequest</a></li>
+<li><a href="#message-synthesizeresponse">Message: SynthesizeResponse</a></li>
+<li><a href="#message-synthesizerconfig">Message: SynthesizerConfig</a></li>
+<li><a href="#message-versionrequest">Message: VersionRequest</a></li>
+<li><a href="#message-versionresponse">Message: VersionResponse</a></li>
+<li><a href="#message-voice">Message: Voice</a></li>
+<li><a href="#enum-synthesizerconfig-audioencoding">Enum: SynthesizerConfig.AudioEncoding</a></li>
+</ul></li>
+<li><a href="#scalar-value-types">Scalar Value Types</a></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+    </div>
+    
+
+  </div>
+
+
+<div id="body-inner">
+  
+    <h1>Luna API Reference</h1>
+  
+
+
+
+    
+    
+    
+
+
+
+<p>The Luna API is defined using <a href="https://grpc.io/docs/guides/">gRPC and protocol buffers</a>.
+This section of the documentation is auto-generated from the
+<a href="https://github.com/cobaltspeech/sdk-luna/blob/master/grpc/luna.proto">protobuf file</a>.
+It describes the data types and functions defined in the spec. The &ldquo;messages&rdquo; below
+correspond to the data structures to be used, and the &ldquo;service&rdquo; contains the
+methods that can be called.</p>
+
+<h2 id="luna-proto">luna.proto</h2>
+
+<h3 id="service-luna">Service: Luna</h3>
+
+<p>Service that implements the Cobalt Luna Text-to-Speech API</p>
+
+<table>
+<thead>
+<tr>
+<th>Method Name</th>
+<th>Request Type</th>
+<th>Response Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Version</td>
+<td>VersionRequest</td>
+<td>VersionResponse</td>
+<td>Queries the Version of the Server.</td>
+</tr>
+
+<tr>
+<td>ListVoices</td>
+<td>ListVoicesRequest</td>
+<td>ListVoicesResponse</td>
+<td>Retrieves a list of available text-to-speech voices.</td>
+</tr>
+
+<tr>
+<td>Synthesize</td>
+<td>SynthesizeRequest</td>
+<td>SynthesizeResponse</td>
+<td>Performs synchronous text-to-speech generation.</td>
+</tr>
+
+<tr>
+<td>SynthesizeStream</td>
+<td>SynthesizeRequest</td>
+<td>SynthesizeResponse</td>
+<td>Performs streaming text-to-speech generation, where the synthesized speech is streamed to the client as it is being generated.</td>
+</tr>
+</tbody>
+</table>
+
+<p><!-- end services --></p>
+
+<h3 id="message-listvoicesrequest">Message: ListVoicesRequest</h3>
+
+<p>The top-level message sent by the client for the <code>ListVoices</code> method.</p>
+
+<p>This message is empty and has no fields.</p>
+
+<h3 id="message-listvoicesresponse">Message: ListVoicesResponse</h3>
+
+<p>The message sent by the server for the <code>ListVoices</code> method.</p>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>voices</td>
+<td>Voice</td>
+<td>repeated</td>
+<td>List of voices available for use that match the request.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="message-synthesizerequest">Message: SynthesizeRequest</h3>
+
+<p>The top-level message sent by the client for the <code>Synthesize</code> and
+<code>SynthesizeStream</code> methods.</p>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>config</td>
+<td>SynthesizerConfig</td>
+<td></td>
+<td>Provides configuration for the text-to-speech engine.</td>
+</tr>
+
+<tr>
+<td>text</td>
+<td>string</td>
+<td></td>
+<td>The text to generate speech for.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="message-synthesizeresponse">Message: SynthesizeResponse</h3>
+
+<p>The message returned to the client by the <code>Synthesize</code> and
+<code>SynthesizeStream</code> methods.</p>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>audio</td>
+<td>bytes</td>
+<td></td>
+<td>Audio samples of the generated speech. The samples will have the encoding specified in the SynthesizerConfig.AudioEncoding field of the request.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="message-synthesizerconfig">Message: SynthesizerConfig</h3>
+
+<p>Configuration for setting up the text-to-speech engine.</p>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>voice_id</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>encoding</td>
+<td>SynthesizerConfig.AudioEncoding</td>
+<td></td>
+<td>Encoding of the synthesized speech. If not specified, defaults to RAW_FLOAT32.</td>
+</tr>
+
+<tr>
+<td>n_samples</td>
+<td>uint64</td>
+<td></td>
+<td>Optional field for streaming synthesis. If not zero, waits until n_samples are generated before sending the audio data to the client. In the case that the entire generated audio is less than n_samples, the samples will be returned when synthesis is complete.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="message-versionrequest">Message: VersionRequest</h3>
+
+<p>The top-level message sent by the client for the <code>Version</code> method.</p>
+
+<p>This message is empty and has no fields.</p>
+
+<h3 id="message-versionresponse">Message: VersionResponse</h3>
+
+<p>The message sent by the server for the <code>Version</code> method.</p>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>version</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="message-voice">Message: Voice</h3>
+
+<p>Description of a Luna Voice</p>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier of the voice. This identifier is used to choose the voice during a synthesis request, and is specified in the <code>SynthesizerConfig</code> message.</td>
+</tr>
+
+<tr>
+<td>name</td>
+<td>string</td>
+<td></td>
+<td>Name of the voice. This is a concise name describing the voice, and maybe presented to the end-user, for example, to help which voice to choose for their TTS task.</td>
+</tr>
+</tbody>
+</table>
+
+<p><!-- end messages --></p>
+
+<h3 id="enum-synthesizerconfig-audioencoding">Enum: SynthesizerConfig.AudioEncoding</h3>
+
+<p>Supported audio encodings. Unless otherwise noted, the sample rate is
+defined by the voice model.</p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Number</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>RAW_LINEAR16</td>
+<td>0</td>
+<td>Raw (headerless) uncompressed 16-bit signed little endian samples (linear PCM), single channel.</td>
+</tr>
+
+<tr>
+<td>RAW_FLOAT32</td>
+<td>1</td>
+<td>Raw (headerless) uncompressed 32-bit floating-point little endian samples (PCM), single channel.</td>
+</tr>
+</tbody>
+</table>
+
+<p><!-- end enums --></p>
+
+<p><!-- end HasExtensions --></p>
+
+<h2 id="scalar-value-types">Scalar Value Types</h2>
+
+<table>
+<thead>
+<tr>
+<th>.proto Type</th>
+<th>Notes</th>
+<th>Go Type</th>
+<th>Python Type</th>
+<th>C++ Type</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>double</td>
+<td></td>
+<td>float64</td>
+<td>float</td>
+<td>double</td>
+</tr>
+
+<tr>
+<td>float</td>
+<td></td>
+<td>float32</td>
+<td>float</td>
+<td>float</td>
+</tr>
+
+<tr>
+<td>int32</td>
+<td>Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint32 instead.</td>
+<td>int32</td>
+<td>int</td>
+<td>int32</td>
+</tr>
+
+<tr>
+<td>int64</td>
+<td>Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint64 instead.</td>
+<td>int64</td>
+<td>int/long</td>
+<td>int64</td>
+</tr>
+
+<tr>
+<td>uint32</td>
+<td>Uses variable-length encoding.</td>
+<td>uint32</td>
+<td>int/long</td>
+<td>uint32</td>
+</tr>
+
+<tr>
+<td>uint64</td>
+<td>Uses variable-length encoding.</td>
+<td>uint64</td>
+<td>int/long</td>
+<td>uint64</td>
+</tr>
+
+<tr>
+<td>sint32</td>
+<td>Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int32s.</td>
+<td>int32</td>
+<td>int</td>
+<td>int32</td>
+</tr>
+
+<tr>
+<td>sint64</td>
+<td>Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int64s.</td>
+<td>int64</td>
+<td>int/long</td>
+<td>int64</td>
+</tr>
+
+<tr>
+<td>fixed32</td>
+<td>Always four bytes. More efficient than uint32 if values are often greater than 2^28.</td>
+<td>uint32</td>
+<td>int</td>
+<td>uint32</td>
+</tr>
+
+<tr>
+<td>fixed64</td>
+<td>Always eight bytes. More efficient than uint64 if values are often greater than 2^56.</td>
+<td>uint64</td>
+<td>int/long</td>
+<td>uint64</td>
+</tr>
+
+<tr>
+<td>sfixed32</td>
+<td>Always four bytes.</td>
+<td>int32</td>
+<td>int</td>
+<td>int32</td>
+</tr>
+
+<tr>
+<td>sfixed64</td>
+<td>Always eight bytes.</td>
+<td>int64</td>
+<td>int/long</td>
+<td>int64</td>
+</tr>
+
+<tr>
+<td>bool</td>
+<td></td>
+<td>bool</td>
+<td>boolean</td>
+<td>bool</td>
+</tr>
+
+<tr>
+<td>string</td>
+<td>A string must always contain UTF-8 encoded or 7-bit ASCII text.</td>
+<td>string</td>
+<td>str/unicode</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>bytes</td>
+<td>May contain any arbitrary sequence of bytes.</td>
+<td>[]byte</td>
+<td>str</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+
+
+
+    
+    
+          <footer class=" footline" >
+	
+</footer>
+  </div>
+</div>
+
+<div id="navigation">
+<a class="nav nav-prev" href="/sdk-luna/using-luna-sdk/streaming/" title="Streaming Synthesis"> <i class="fa fa-chevron-left"></i><label>Streaming Synthesis</label></a>
+    <a class="nav nav-next" href="/sdk-luna/getting-started/" title="Getting Started" style="margin-right: 0px;"><label>Getting Started</label><i class="fa fa-chevron-right"></i></a></div>
+
+</section>
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+  <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>    
+
+<script src="/sdk-luna/js/clipboard.min.js"></script>
+<script src="/sdk-luna/js/featherlight.min.js"></script>
+<script src="/sdk-luna/js/html5shiv-printshiv.min.js"></script>
+
+<script src="/sdk-luna/js/modernizr.custom.71422.js"></script>
+<script src="/sdk-luna/js/docdock.js"></script>
+<script src="/sdk-luna/theme-original/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

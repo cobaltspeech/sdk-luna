@@ -1,645 +1,226 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
+  <head>
 	<meta name="generator" content="Hugo 0.55.4" />
-    <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Luna SDK Documentation</title>
-    <link href='/sdk-luna/slate/stylesheets/monokai.css' rel="stylesheet" media="screen" />
-<link href='/sdk-luna/slate/stylesheets/screen.css' rel="stylesheet" media="screen" />
-<link href='/sdk-luna/slate/stylesheets/print.css' rel="stylesheet" media="print" />
+    <title>Luna SDK -- Cobalt</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Luna SDK Documentation :: Luna SDK -- Cobalt</title>
+<link rel="shortcut icon" href="/sdk-luna/images/favicon.ico" type="image/x-icon" />
+<link href="/sdk-luna/css/nucleus.css" rel="stylesheet">
+<link href="/sdk-luna/css/font-awesome.min.css" rel="stylesheet">
+<link href="/sdk-luna/css/hybrid.css" rel="stylesheet">
+<link href="/sdk-luna/css/featherlight.min.css" rel="stylesheet">
+<link href="/sdk-luna/css/auto-complete.css" rel="stylesheet">
+<link href="/sdk-luna/theme-original/style.css" rel="stylesheet">
+
+  <link href="/sdk-luna/theme-original/variant-blue.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/sdk-luna/css/bootstrap.min.css">
+<script src="/sdk-luna/js/jquery-2.x.min.js"></script>
+<style type="text/css">
+  :root #header + #content > #left > #rlblock_left {
+    display:none !important;
+  }
+</style>
+<link href="/sdk-luna/css/tabs.css" rel="stylesheet" type="text/css">
+<script src="/sdk-luna/js/tabs.js"></script>
+
 
     
-<script src='/sdk-luna/slate/javascripts/all_nosearch.js'></script>
-
+  </head>
+  <body data-url="/sdk-luna/">
     
-</head>
-<body class="index" data-languages="[ &#34;go&#34; ,  &#34;python&#34; ]">
-    <a href="#" id="nav-button">
-        <span>
-        NAV
-        <img src='/sdk-luna/slate/images/navbar.png'/>
-      </span>
-    </a>
-    <div class="tocify-wrapper">
-        
-         <img src='/sdk-luna/images/logo.png' style="display:block; margin:auto; margin-top: 20px;" />
+      <div id="headermain"></div>
+<nav id="sidebar" class="showVisitedLinks">
 
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+      
+	
+  
+    <p><img src="/sdk-luna/images/logo-white.png" alt="Cobalt's SDK Documentation" /></p>
+
+<p>Luna SDK &ndash; Cobalt</p>
+
+  
+
+
+    </div>
+        <div class="searchbox">
+		    <label for="search-by"><i class="fa fa-search"></i></label>
+		    <input data-search-input id="search-by" type="text" placeholder="Search...">
+		    <span data-search-clear=""><i class="fa fa-close"></i></span>
+		</div>
+		<script type="text/javascript" src="/sdk-luna/js/lunr.min.js"></script>
+		<script type="text/javascript" src="/sdk-luna/js/auto-complete.js"></script>
+		<script type="text/javascript">
         
-        <div class="lang-selector">
-            
-            <a href="#" data-language-name="go">Go</a>
-            
-            <a href="#" data-language-name="python">Python</a>
-            
+            var baseurl = "https:\/\/cobaltspeech.github.io\/sdk-luna";
+        
+		</script>
+		<script type="text/javascript" src="/sdk-luna/js/search.js"></script>
+  </div>
+
+      <ul class="topics">
+            <li data-nav-id="/sdk-luna/" class="dd-item">
+            <a href="/sdk-luna/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+    <li data-nav-id="/sdk-luna/getting-started/" class="dd-item
+        ">
+      <div>
+      <a href="/sdk-luna/getting-started/">Getting Started</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sdk-luna/using-luna-sdk/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sdk-luna/using-luna-sdk/">Using Luna SDK</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sdk-luna/using-luna-sdk/include/" class="dd-item">
+        <div>
+          <a href="/sdk-luna/using-luna-sdk/include/">
+            Including the SDK
+          </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
-        
-        
-        <div id="toc">
+    </li>
+      <li data-nav-id="/sdk-luna/using-luna-sdk/errors/" class="dd-item">
+        <div>
+          <a href="/sdk-luna/using-luna-sdk/errors/">
+            Error Handling
+          </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
-        
-        
-        <ul class="toc-footer">
-            
-            <li><a href='https://www.cobaltspeech.com/contact'>Contact us</a></li>
-            
+    </li>
+      <li data-nav-id="/sdk-luna/using-luna-sdk/connecting/" class="dd-item">
+        <div>
+          <a href="/sdk-luna/using-luna-sdk/connecting/">
+            Connecting to the Server
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sdk-luna/using-luna-sdk/synthesis-config/" class="dd-item">
+        <div>
+          <a href="/sdk-luna/using-luna-sdk/synthesis-config/">
+            Synthesis Configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sdk-luna/using-luna-sdk/batch/" class="dd-item">
+        <div>
+          <a href="/sdk-luna/using-luna-sdk/batch/">
+            Batch Synthesis
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sdk-luna/using-luna-sdk/streaming/" class="dd-item">
+        <div>
+          <a href="/sdk-luna/using-luna-sdk/streaming/">
+            Streaming Synthesis
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
         </ul>
-        
-        
-    </div>
-    <div class="page-wrapper">
-        <div class="dark-box"></div>
-        <div class="content">
-            
+    </li>
+    <li data-nav-id="/sdk-luna/protobuf/" class="dd-item
+        ">
+      <div>
+      <a href="/sdk-luna/protobuf/">Luna API Reference</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+        <section id="shortcuts">
+                <li class="" role=""><h3>More</h3><a href="https://github.com/cobaltspeech/sdk-luna" target="_blank" rel="noopener"><i class='fa fa-github'></i> <label>Github repo</label></a></li>
+                <li class="" role=""><a href="https://www.cobaltspeech.com/contact" target="_blank" rel="noopener"><i class='fa fa-bookmark'></i> <label>Contact us</label></a></li>
+        </section>
+            <a id="clear-history" class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+
+    <hr />
+    <li></li>
     
-        
+    </ul>
 
-<h1 id="luna-sdk">Luna SDK</h1>
+ <section id="footer">
+    </section>
+  </div>
+</nav>
 
-<p>Luna is Cobalt&rsquo;s text-to-speech engine.  It can be bundled into your application as a library, or deployed on-prem and accessed over the network.  This documentation refers to accessing the network-based luna server.</p>
 
-<p>Cobalt will provide you with a package of Luna that contains the engine, your voice objects, and a server application.  This server exports Luna&rsquo;s functionality over the gRPC protocol.  The <a href="https://github.com/cobaltspeech/luna-sdk" target="_blank">https://github.com/cobaltspeech/luna-sdk</a> repository contains the SDK that you can use in your application to communicate with the Luna server.  This SDK is currently available for Go and Python languages; and we would be happy to talk to you if you need support for other languages.  Most of the core SDK is generated automatically using the gRPC tools, and Cobalt provides a top level package for more convenient API calls.</p>
 
-<h1 id="installation">Installation</h1>
+<section id="body">
+<div id="overlay"></div>
+<div class="padding highlightable">
 
-<p>Instructions for installing the SDK are language-specific.</p>
 
-<h3 id="go">Go</h3>
+<div id="body-inner">
+  
 
-<p>The Go SDK supports go modules.  We recommend using Go 1.11 or later.  You can download the sdk using:</p>
 
-<p><code>go get -u github.com/cobaltspeech/sdk-luna/grpc/go-luna</code></p>
 
-<p>Alternatively, if you just import <code>github.com/cobaltspeech/sdk-luna/grpc/go-luna</code> in your application and run <code>go mod tidy</code>, it will be fetched automatically.</p>
-
-<h3 id="python">Python</h3>
-
-<p>The Python SDK supports installation via pip.  We recommend Python 3.5 or later, and pip 19.0 or later.  You can download the sdk using:</p>
-
-<p><code>pip install &quot;git+https://github.com/cobaltspeech/sdk-luna#egg=luna&amp;subdirectory=grpc/py-luna&quot;</code></p>
-
-<h1 id="quickstart">Quickstart</h1>
-
-<p>Once you have your Luna server up and running, let&rsquo;s see how we can ask it to synthesize speech for some text!</p>
-
-<p>First, you need to know the address (<code>host</code>:<code>port</code>) where the server is running.  This document will assume the values <code>127.0.0.1:2727</code>, but be sure to change those to point to your server instance.  Port 2727 is the default port that the luna server binds to.</p>
-
-<p>The following code snippet queries the server for a list of available voices, and uses the first listed voice to run text to speech.</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
-
-<span class="kn">import</span> <span class="p">(</span>
-	<span class="s">&#34;context&#34;</span>
-	<span class="s">&#34;fmt&#34;</span>
-
-	<span class="s">&#34;github.com/cobaltspeech/sdk-luna/grpc/go-luna&#34;</span>
-	<span class="s">&#34;github.com/cobaltspeech/sdk-luna/grpc/go-luna/lunapb&#34;</span>
-<span class="p">)</span>
-
-<span class="kd">const</span> <span class="nx">serverAddress</span> <span class="p">=</span> <span class="s">&#34;127.0.0.1:2727&#34;</span>
-
-<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-	<span class="c1">// Create a Luna Client
-</span><span class="c1"></span>	<span class="nx">client</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">luna</span><span class="p">.</span><span class="nf">NewClient</span><span class="p">(</span><span class="nx">serverAddress</span><span class="p">)</span>
-	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-		<span class="c1">// TODO: handle err
-</span><span class="c1"></span>	<span class="p">}</span>
-
-	<span class="c1">// Clean up at the end
-</span><span class="c1"></span>	<span class="k">defer</span> <span class="nx">client</span><span class="p">.</span><span class="nf">Close</span><span class="p">()</span>
-
-	<span class="c1">// Get list of available voices
-</span><span class="c1"></span>	<span class="nx">pbvoices</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">client</span><span class="p">.</span><span class="nf">ListVoices</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nf">Background</span><span class="p">())</span>
-	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-		<span class="c1">// TODO: handle err
-</span><span class="c1"></span>	<span class="p">}</span>
-
-	<span class="nx">voices</span> <span class="o">:=</span> <span class="nx">pbvoices</span><span class="p">.</span><span class="nx">Voices</span>
-	<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">voices</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
-		<span class="c1">// TODO: handle err
-</span><span class="c1"></span>	<span class="p">}</span>
-
-	<span class="c1">// Choose the first voice
-</span><span class="c1"></span>	<span class="nx">v</span> <span class="o">:=</span> <span class="nx">voices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
-	<span class="c1">// Request TTS
-</span><span class="c1"></span>	<span class="nx">pbtts</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">client</span><span class="p">.</span><span class="nf">Synthesize</span><span class="p">(</span>
-		<span class="nx">context</span><span class="p">.</span><span class="nf">Background</span><span class="p">(),</span>
-		<span class="o">&amp;</span><span class="nx">lunapb</span><span class="p">.</span><span class="nx">SynthesizeRequest</span><span class="p">{</span>
-			<span class="nx">Config</span><span class="p">:</span> <span class="o">&amp;</span><span class="nx">lunapb</span><span class="p">.</span><span class="nx">SynthesizerConfig</span><span class="p">{</span>
-				<span class="nx">VoiceId</span><span class="p">:</span> <span class="nx">v</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span>
-			<span class="p">},</span>
-			<span class="nx">Text</span><span class="p">:</span> <span class="s">&#34;hello world!&#34;</span><span class="p">,</span>
-		<span class="p">})</span>
-	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-		<span class="c1">// TODO: handle err
-</span><span class="c1"></span>	<span class="p">}</span>
-
-	<span class="c1">// The generated speech is 32-bit float samples, at 48k samples per second.
-</span><span class="c1"></span>	<span class="c1">// Do something with the samples.
-</span><span class="c1"></span>	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Received %d samples\n&#34;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">pbtts</span><span class="p">.</span><span class="nx">Samples</span><span class="p">))</span>
-
-<span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">luna.client</span> <span class="kn">import</span> <span class="n">LunaClient</span>
-<span class="kn">from</span> <span class="nn">luna</span> <span class="kn">import</span> <span class="n">luna_pb2</span> <span class="k">as</span> <span class="n">lunapb</span>
-
-<span class="n">SERVER_ADDRESS</span> <span class="o">=</span> <span class="s2">&#34;127.0.0.1:2727&#34;</span>
-
-<span class="k">try</span><span class="p">:</span>
-    <span class="c1"># Create a Luna Client</span>
-    <span class="n">client</span>  <span class="o">=</span> <span class="n">LunaClient</span><span class="p">(</span><span class="n">SERVER_ADDRESS</span><span class="p">)</span>
-
-    <span class="c1"># Retrieve a list of available voices</span>
-    <span class="n">pbvoices</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">ListVoices</span><span class="p">()</span>
-
-    <span class="c1"># Choose the first voice for synthesis</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">pbvoice</span><span class="o">.</span><span class="n">voices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
-    <span class="c1"># Request TTS</span>
-    <span class="n">pbtts</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">Synthesize</span><span class="p">(</span>
-        <span class="n">lunapb</span><span class="o">.</span><span class="n">SynthesizeRequest</span><span class="p">(</span>
-            <span class="n">config</span><span class="o">=</span><span class="n">lunapb</span><span class="o">.</span><span class="n">SynthesizerConfig</span><span class="p">(</span><span class="n">voice_id</span><span class="o">=</span><span class="n">v</span><span class="o">.</span><span class="nb">id</span><span class="p">),</span>
-            <span class="n">text</span><span class="o">=</span><span class="s2">&#34;hello world!&#34;</span><span class="p">))</span>
-
-    <span class="c1">#  The generated speech is 32-bit float samples, at 48k samples per second.</span>
-    <span class="c1"># Do something with the samples.</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Received </span><span class="si">%d</span><span class="s2"> samples&#34;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">pbtts</span><span class="o">.</span><span class="n">samples</span><span class="p">))</span>
-<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-    <span class="c1"># TODO: handle exceptions</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">err</span><span class="p">)</span></code></pre></div>
-<h1 id="transport-layer-security">Transport Layer Security</h1>
-
-<p>Cobalt recommends that your luna server deployment in production be configured with TLS.  The default setting for grpc clients to connect to the server uses TLS and validates the server&rsquo;s SSL certificate before transmitting data to it.</p>
-
-<p>It may sometimes be required to disable TLS in the gRPC setup: perhaps for testing, or perhaps for special deployment needs.  If the server is not using TLS, the client setup needs to be changed in order for the connection to succeed. The code samples in this section show how to create the luna client for connections without TLS.</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
-
-<span class="kn">import</span> <span class="p">(</span>
-	<span class="s">&#34;github.com/cobaltspeech/sdk-luna/grpc/go-luna&#34;</span>
-<span class="p">)</span>
-
-<span class="kd">const</span> <span class="nx">serverAddress</span> <span class="p">=</span> <span class="s">&#34;127.0.0.1:2727&#34;</span>
-
-<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-	<span class="c1">// Create a Luna Client with TLS disabled
-</span><span class="c1"></span>	<span class="nx">client</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">luna</span><span class="p">.</span><span class="nf">NewClientWithInsecure</span><span class="p">(</span><span class="nx">serverAddress</span><span class="p">)</span>
-
-	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-		<span class="c1">// TODO: handle err
-</span><span class="c1"></span>	<span class="p">}</span>
-
-	<span class="c1">// ...
-</span><span class="c1"></span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">luna.client</span> <span class="kn">import</span> <span class="n">LunaClient</span>
-
-<span class="n">SERVER_ADDRESS</span> <span class="o">=</span> <span class="s2">&#34;127.0.0.1:2727&#34;</span>
-
-<span class="c1"># create a luna client with TLS disabled</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">LunaClient</span><span class="o">.</span><span class="n">with_insecure</span><span class="p">(</span><span class="n">SERVER_ADDRESS</span><span class="p">)</span></code></pre></div>
-<h1 id="mutually-authenticated-tls">Mutually Authenticated TLS</h1>
-
-<p>In our recommended default setup, TLS is enabled in the gRPC setup, and when connecting to the server, clients check the server&rsquo;s SSL certificate to verify that they are talking to an authentic server.  This is similar to how &ldquo;https&rdquo; connections work in web browsers.</p>
-
-<p>It may sometimes be required that both the client and server need to authenticate with each other when establishing the connection.  This is possible by configuring the luna client with a valid certificate file, which it presents to the luna server when negotiating TLS connection.  The server validates the certificate and only allows authentic clients to send requests to it.</p>
-
-<p>Please contact us to discuss more details of this setup &ndash; whether to use it and how to configure it.</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
-
-<span class="kn">import</span> <span class="p">(</span>
-	<span class="s">&#34;github.com/cobaltspeech/sdk-luna/grpc/go-luna&#34;</span>
-<span class="p">)</span>
-
-<span class="kd">const</span> <span class="nx">serverAddress</span> <span class="p">=</span> <span class="s">&#34;127.0.0.1:2727&#34;</span>
-
-<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-	<span class="c1">// Create a Luna Client with specific SSL credentials
-</span><span class="c1"></span>	<span class="nx">client</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">luna</span><span class="p">.</span><span class="nf">NewClientWithCertFile</span><span class="p">(</span><span class="nx">serverAddress</span><span class="p">,</span> <span class="s">&#34;/path/to/cert.pem&#34;</span><span class="p">)</span>
-
-	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-		<span class="c1">// TODO: handle err
-</span><span class="c1"></span>	<span class="p">}</span>
-
-	<span class="c1">// ...
-</span><span class="c1"></span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">luna.client</span> <span class="kn">import</span> <span class="n">LunaClient</span>
-
-<span class="n">SERVER_ADDRESS</span> <span class="o">=</span> <span class="s2">&#34;127.0.0.1:2727&#34;</span>
-
-<span class="c1"># create a luna client with specific SSL credentials</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">LunaClient</span><span class="o">.</span><span class="n">with_cert_file</span><span class="p">(</span><span class="n">SERVER_ADDRESS</span><span class="p">,</span> <span class="s2">&#34;/path/to/cert.pem&#34;</span><span class="p">)</span></code></pre></div>
     
-        
+    
+    
+<span id="sidebar-toggle-span">
+<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
+</span>
+ 
 
-<h1 id="api-specification">API Specification</h1>
 
-<p>The Luna API is specified as a <a href="https://github.com/cobaltspeech/sdk-luna/blob/master/grpc/luna.proto" target="_blank">proto file</a>.
-This section of the documentation is auto-generated from the spec.  It describes
-the data types and functions defined in the spec. The &ldquo;messages&rdquo; below
-correspond to the data structures to be used, and the &ldquo;service&rdquo; contains the
-methods that can be called.</p>
+<h1 id="luna-api-overview">Luna API Overview</h1>
 
-<h2 id="luna-proto">luna.proto</h2>
+<p>Luna is Cobalt’s <a href="https://en.wikipedia.org/wiki/Speech_synthesis">text to speech</a>
+(TTS) engine. It can be deployed on-prem and accessed over the network or on your
+local machine via an API. We currently support Go, Python, and C++ and are adding
+support for more languages.</p>
 
-<h3 id="service-luna">Service: Luna</h3>
+<p>From the API&rsquo;s perspective, the process is generating audio data is fairly
+straightforward. After establishing a connection with the Luna server, a client
+submits text to Luna, and Luna returns synthesized audio data that mimics human
+speech.</p>
 
-<p>Service that implements the Cobalt Luna Text-to-Speech API</p>
+<p>For information about installing and running the Luna server, see the
+<a href="getting-started">Getting Started</a> section. For details about using the SDK,
+see <a href="using-luna-sdk">Using Luna SDK</a>.</p>
 
-<table>
-<thead>
-<tr>
-<th>Method Name</th>
-<th>Request Type</th>
-<th>Response Type</th>
-<th>Description</th>
-</tr>
-</thead>
 
-<tbody>
-<tr>
-<td>Version</td>
-<td>VersionRequest</td>
-<td>VersionResponse</td>
-<td>Queries the Version of the Server.</td>
-</tr>
 
-<tr>
-<td>ListVoices</td>
-<td>ListVoicesRequest</td>
-<td>ListVoicesResponse</td>
-<td>Retrieves a list of available text-to-speech voices.</td>
-</tr>
 
-<tr>
-<td>Synthesize</td>
-<td>SynthesizeRequest</td>
-<td>SynthesizeResponse</td>
-<td>Performs synchronous text-to-speech generation.</td>
-</tr>
+    
+    
+          <footer class=" footline" >
+	
+</footer>
+  </div>
+</div>
 
-<tr>
-<td>SynthesizeStream</td>
-<td>SynthesizeRequest</td>
-<td>SynthesizeResponse</td>
-<td>Performs streaming text-to-speech generation, where the synthesized speech is streamed to the client as it is being generated.</td>
-</tr>
-</tbody>
-</table>
+<div id="navigation">
+<a class="nav nav-next" href="/sdk-luna/getting-started/" title="Getting Started" style="margin-right: 0px;"><label>Getting Started</label><i class="fa fa-chevron-right"></i></a></div>
 
-<p><!-- end services --></p>
+</section>
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+  <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>    
 
-<h3 id="message-listvoicesrequest">Message: ListVoicesRequest</h3>
+<script src="/sdk-luna/js/clipboard.min.js"></script>
+<script src="/sdk-luna/js/featherlight.min.js"></script>
+<script src="/sdk-luna/js/html5shiv-printshiv.min.js"></script>
 
-<p>The top-level message sent by the client for the <code>ListVoices</code> method.</p>
+<script src="/sdk-luna/js/modernizr.custom.71422.js"></script>
+<script src="/sdk-luna/js/docdock.js"></script>
+<script src="/sdk-luna/theme-original/script.js"></script>
 
-<p>This message is empty and has no fields.</p>
-
-<h3 id="message-listvoicesresponse">Message: ListVoicesResponse</h3>
-
-<p>The message sent by the server for the <code>ListVoices</code> method.</p>
-
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Label</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>voices</td>
-<td>Voice</td>
-<td>repeated</td>
-<td>List of voices available for use that match the request.</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="message-synthesizerequest">Message: SynthesizeRequest</h3>
-
-<p>The top-level message sent by the client for the <code>Synthesize</code> and
-<code>SynthesizeStream</code> methods.</p>
-
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Label</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>config</td>
-<td>SynthesizerConfig</td>
-<td></td>
-<td>Provides configuration for the text-to-speech engine.</td>
-</tr>
-
-<tr>
-<td>text</td>
-<td>string</td>
-<td></td>
-<td>The text to generate speech for.</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="message-synthesizeresponse">Message: SynthesizeResponse</h3>
-
-<p>The message returned to the client by the <code>Synthesize</code> and
-<code>SynthesizeStream</code> methods.</p>
-
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Label</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>audio</td>
-<td>bytes</td>
-<td></td>
-<td>Audio samples of the generated speech</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="message-synthesizerconfig">Message: SynthesizerConfig</h3>
-
-<p>Configuration for setting up the text-to-speech engine.</p>
-
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Label</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>voice_id</td>
-<td>string</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td>encoding</td>
-<td>SynthesizerConfig.AudioEncoding</td>
-<td></td>
-<td>Encoding of the synthesized speech. If not specified, defaults to RAW_FLOAT32.</td>
-</tr>
-
-<tr>
-<td>n_samples</td>
-<td>uint64</td>
-<td></td>
-<td>Optional field for streaming synthesis. If not zero, waits until n_samples are generated before sending the audio data to the client. In the case that the entire generated audio is less than n_samples, the samples will be returned when synthesis is complete.</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="message-versionrequest">Message: VersionRequest</h3>
-
-<p>The top-level message sent by the client for the <code>Version</code> method.</p>
-
-<p>This message is empty and has no fields.</p>
-
-<h3 id="message-versionresponse">Message: VersionResponse</h3>
-
-<p>The message sent by the server for the <code>Version</code> method.</p>
-
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Label</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>version</td>
-<td>string</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="message-voice">Message: Voice</h3>
-
-<p>Description of a Luna Voice</p>
-
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Label</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier of the voice. This identifier is used to choose the voice during a synthesis request, and is specified in the <code>SynthesizerConfig</code> message.</td>
-</tr>
-
-<tr>
-<td>name</td>
-<td>string</td>
-<td></td>
-<td>Name of the voice. This is a concise name describing the voice, and maybe presented to the end-user, for example, to help which voice to choose for their TTS task.</td>
-</tr>
-</tbody>
-</table>
-
-<p><!-- end messages --></p>
-
-<h3 id="enum-synthesizerconfig-audioencoding">Enum: SynthesizerConfig.AudioEncoding</h3>
-
-<p>Supported audio encodings. Unless otherwise noted, the sample rate is
-defined by the voice model.</p>
-
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Number</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>RAW_LINEAR16</td>
-<td>0</td>
-<td>Raw (headerless) uncompressed 16-bit signed little endian samples (linear PCM), single channel.</td>
-</tr>
-
-<tr>
-<td>RAW_FLOAT32</td>
-<td>1</td>
-<td>Raw (headerless) uncompressed 32-bit floating-point little endian samples (PCM), single channel.</td>
-</tr>
-</tbody>
-</table>
-
-<p><!-- end enums --></p>
-
-<p><!-- end HasExtensions --></p>
-
-<h2 id="scalar-value-types">Scalar Value Types</h2>
-
-<table>
-<thead>
-<tr>
-<th>.proto Type</th>
-<th>Notes</th>
-<th>Go Type</th>
-<th>Python Type</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>double</td>
-<td></td>
-<td>float64</td>
-<td>float</td>
-</tr>
-
-<tr>
-<td>float</td>
-<td></td>
-<td>float32</td>
-<td>float</td>
-</tr>
-
-<tr>
-<td>int32</td>
-<td>Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint32 instead.</td>
-<td>int32</td>
-<td>int</td>
-</tr>
-
-<tr>
-<td>int64</td>
-<td>Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint64 instead.</td>
-<td>int64</td>
-<td>int/long</td>
-</tr>
-
-<tr>
-<td>uint32</td>
-<td>Uses variable-length encoding.</td>
-<td>uint32</td>
-<td>int/long</td>
-</tr>
-
-<tr>
-<td>uint64</td>
-<td>Uses variable-length encoding.</td>
-<td>uint64</td>
-<td>int/long</td>
-</tr>
-
-<tr>
-<td>sint32</td>
-<td>Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int32s.</td>
-<td>int32</td>
-<td>int</td>
-</tr>
-
-<tr>
-<td>sint64</td>
-<td>Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int64s.</td>
-<td>int64</td>
-<td>int/long</td>
-</tr>
-
-<tr>
-<td>fixed32</td>
-<td>Always four bytes. More efficient than uint32 if values are often greater than 2^28.</td>
-<td>uint32</td>
-<td>int</td>
-</tr>
-
-<tr>
-<td>fixed64</td>
-<td>Always eight bytes. More efficient than uint64 if values are often greater than 2^56.</td>
-<td>uint64</td>
-<td>int/long</td>
-</tr>
-
-<tr>
-<td>sfixed32</td>
-<td>Always four bytes.</td>
-<td>int32</td>
-<td>int</td>
-</tr>
-
-<tr>
-<td>sfixed64</td>
-<td>Always eight bytes.</td>
-<td>int64</td>
-<td>int/long</td>
-</tr>
-
-<tr>
-<td>bool</td>
-<td></td>
-<td>bool</td>
-<td>boolean</td>
-</tr>
-
-<tr>
-<td>string</td>
-<td>A string must always contain UTF-8 encoded or 7-bit ASCII text.</td>
-<td>string</td>
-<td>str/unicode</td>
-</tr>
-
-<tr>
-<td>bytes</td>
-<td>May contain any arbitrary sequence of bytes.</td>
-<td>[]byte</td>
-<td>str</td>
-</tr>
-</tbody>
-</table>
 
     
 
-        </div>
-        <div class="dark-box">
-            
-            <div class="lang-selector">
-                
-                <a href="#" data-language-name="go">Go</a>
-                
-                <a href="#" data-language-name="python">Python</a>
-                
-            </div>
-            
-        </div>
-    </div>
     
-</body>
+    
+
+    
+  </body>
 </html>
