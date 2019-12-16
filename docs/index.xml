@@ -26,9 +26,8 @@ C++ To use the Luna SDK in a C++ project, you must first download the SDK from G
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/errors/</guid>
-      <description>For the sake of clarity, most examples in the documentation do not fully demonstrate how to handle errors, preferring instead to focus on the topic at hand. However, the Luna SDK does report errors, and client applications should be prepared to handle them.
-A description of how errors are handled for each language is given below.
-C++ The C++ SDK uses exceptions to report errors. Errors originating from the SDK will have the class type LunaException, which inherits from the std::exception class.</description>
+      <description>The Luna SDK reports errors and client applications should be prepared to handle them appropriately. For the sake of clarity, most examples in the documentation do not fully demonstrate how to handle errors, preferring instead to focus on the topic at hand. Full examples, with proper error handling, can be found at our GitHub example folder.
+A brief description of how errors are handled for each language is given below.</description>
     </item>
     
     <item>
@@ -47,9 +46,8 @@ you are ready to create a client connection.&lt;/p&gt;</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://cobaltspeech.github.io/sdk-luna/using-luna-sdk/synthesis-config/</guid>
-      <description>Before we can run text-to-speech, the client needs to specify the configuration Luna should use to generate the audio. The Luna options include the specific voice model, the audio encoding, and the sample size.
-Voice ID Voice models are defined in the Luna server config file, and the client can get a list of available voice models using the ListVoices method.
- // Get the list of voices from Luna response, err := client.</description>
+      <description>Before we can run text-to-speech, the client needs to specify the configuration Luna should use to generate the audio. The Luna options include the specific voice model, the audio encoding, and the sample size. Except where noted, these options apply to both batch synthesis and streaming synthesis.
+Voice ID Voice models are defined in the Luna server config file, and the client can get a list of available voice models using the ListVoices method.</description>
     </item>
     
     <item>

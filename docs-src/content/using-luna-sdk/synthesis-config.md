@@ -7,7 +7,8 @@ weight: 24
 Before we can run text-to-speech, the client needs to specify the
 configuration Luna should use to generate the audio. The Luna options
 include the specific voice model, the audio encoding, and the sample
-size.
+size. Except where noted, these options apply to both
+[batch synthesis](../batch) and [streaming synthesis](../streaming).
 
 ## Voice ID
 Voice models are defined in the Luna server config file, and the client
