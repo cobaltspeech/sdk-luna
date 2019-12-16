@@ -4,12 +4,16 @@ description: "Describes how errors from the SDK are reported."
 weight: 22
 ---
 
-For the sake of clarity, most examples in the documentation do not fully
-demonstrate how to handle errors, preferring instead to focus on the topic
-at hand. However, the Luna SDK does report errors, and client
-applications should be prepared to handle them.
+The Luna SDK reports errors and client applications should
+be prepared to handle them appropriately.  For the sake of
+clarity, most examples in the documentation do not fully
+demonstrate how to handle errors, preferring instead to focus
+on the topic at hand.  Full examples, with proper error handling,
+can be found at our [GitHub example folder](https://github.com/cobaltspeech/sdk-luna/tree/master/examples).
 
-A description of how errors are handled for each language is given below.
+A brief description of how errors are handled for each language
+is given below.
+
 
 ## C++
 
