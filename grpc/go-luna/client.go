@@ -10,6 +10,8 @@ import (
 
 	"github.com/cobaltspeech/sdk-luna/grpc/go-luna/lunapb"
 
+	"crypto/tls"
+
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 )
@@ -24,7 +26,8 @@ type Client struct {
 
 // NewClient creates a new Luna Client to use the provided addr as the luna server.
 func NewClient(addr string) (*Client, error) {
-	conn, err := grpc.Dial(addr)
+	dopt := grpc.WithTransportCredentials(credentials.NewTLS(&tls.Config{}))
+	conn, err := grpc.Dial(addr, dopt)
 	if err != nil {
 		return nil, fmt.Errorf("unable to create a client: %s", err)
 	}
