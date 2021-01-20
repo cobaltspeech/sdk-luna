@@ -23,7 +23,7 @@ if(NOT TARGET grpc)
 
         message(STATUS "Downloading gRPC...")
         execute_process(
-            COMMAND ${GIT_EXECUTABLE} clone --recurse-submodules -b v1.22.0 https://github.com/grpc/grpc
+            COMMAND ${GIT_EXECUTABLE} clone --recurse-submodules -b v1.34.1 https://github.com/grpc/grpc
             WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
             RESULT_VARIABLE _git_clone_result
             OUTPUT_VARIABLE _git_clone_output

@@ -3,3 +3,8 @@ grpc/cpp-luna/grpc
 .vscode
 __pycache__
 *.pyc
+
+# These appear if you install the local source tree for
+# python using pip install -e </path/to/src>
+.eggs
+*.egg-info

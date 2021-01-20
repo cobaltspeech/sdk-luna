@@ -114,7 +114,8 @@ if __name__ == "__main__":
     print("Available voices:")
     response = client.ListVoices()
     for v in response.voices:
-        print("  Name: {}  ID: {}".format(v.name, v.id))
+        print("  ID: {}  Name: {}  Sample Rate(Hz): {}  Language: {}".format(
+            v.id, v.name, v.sample_rate, v.language))
 
     print("")
 

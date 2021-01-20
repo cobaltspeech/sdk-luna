@@ -174,7 +174,9 @@ int main(int argc, char *argv[])
     std::vector<LunaVoice> voices = client.listVoices();
     for (const LunaVoice &v : voices)
     {
-        std::cout << "  Name: " << v.name() << "  ID: " << v.id() << "\n";
+        std::cout << "  ID: " << v.id() << "  Name: " << v.name()
+                  << "  Sample Rate(Hz): " << v.sampleRate()
+                  << "  Language: " << v.language() << "\n";
     }
     std::cout << std::endl;
 

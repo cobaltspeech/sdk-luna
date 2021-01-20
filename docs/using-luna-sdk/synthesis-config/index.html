@@ -239,7 +239,7 @@ can get a list of available voice models using the <code>ListVoices</code> metho
 <span style="color:#999;font-style:italic">// Display the list
 </span><span style="color:#999;font-style:italic"></span>fmt.<span style="color:#447fcf">Printf</span>(<span style="color:#ed9d13">&#34;Available voices:\n&#34;</span>)
 <span style="color:#6ab825;font-weight:bold">for</span> _, voice := <span style="color:#6ab825;font-weight:bold">range</span> response.Voices {
-    fmt.<span style="color:#447fcf">Printf</span>(<span style="color:#ed9d13">&#34;  Name: %s  ID: %s\n&#34;</span>, voice.Name, voice.Id)
+    fmt.<span style="color:#447fcf">Printf</span>(<span style="color:#ed9d13">&#34;  %+v\n&#34;</span>, voice)
 }</code></pre></div>
 </div>
 
@@ -250,7 +250,8 @@ response = client.ListVoices()
 <span style="color:#999;font-style:italic"># Display the list</span>
 <span style="color:#6ab825;font-weight:bold">print</span>(<span style="color:#ed9d13">&#34;Available voices:&#34;</span>)
 <span style="color:#6ab825;font-weight:bold">for</span> v <span style="color:#6ab825;font-weight:bold">in</span> response.voices:
-    <span style="color:#6ab825;font-weight:bold">print</span>(<span style="color:#ed9d13">&#34;  Name: {}  ID:  {}&#34;</span>.format(v.name, v.<span style="color:#24909d">id</span>))</code></pre></div>
+    <span style="color:#6ab825;font-weight:bold">print</span>(<span style="color:#ed9d13">&#34;  ID: {}  Name: {}  Sample Rate(Hz): {}  Language: {}&#34;</span>.format(
+            v.id, v.name, v.sample_rate, v.language))</code></pre></div>
 </div>
 
 <div class="tab-pane" title="C&#43;&#43;">
@@ -261,7 +262,10 @@ response = client.ListVoices()
 </span><span style="color:#999;font-style:italic"></span>std::cout &lt;&lt; <span style="color:#ed9d13">&#34;Available voices:&#34;</span> &lt;&lt; std::endl;
 <span style="color:#6ab825;font-weight:bold">for</span> (<span style="color:#6ab825;font-weight:bold">const</span> LunaVoice &amp;v : voices)
 {
-    std::cout &lt;&lt; <span style="color:#ed9d13">&#34;  Name: &#34;</span> &lt;&lt; v.name() &lt;&lt; <span style="color:#ed9d13">&#34;  ID: &#34;</span> &lt;&lt; v.id() &lt;&lt; std::endl;
+    std::cout &lt;&lt; <span style="color:#ed9d13">&#34;  ID: &#34;</span> &lt;&lt; v.id() 
+              &lt;&lt; <span style="color:#ed9d13">&#34;  Name: &#34;</span> &lt;&lt; v.name()
+              &lt;&lt; <span style="color:#ed9d13">&#34;  Sample Rate(Hz): &#34;</span> &lt;&lt; v.sampleRate()
+              &lt;&lt; <span style="color:#ed9d13">&#34;  Language: &#34;</span> &lt;&lt; v.language() &lt;&lt; <span style="color:#ed9d13">&#34;</span><span style="color:#ed9d13">\n</span><span style="color:#ed9d13">&#34;</span>;
 }
 </code></pre></div>
 </div>

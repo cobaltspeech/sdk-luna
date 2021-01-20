@@ -74,7 +74,7 @@ func main() {
 
 	fmt.Printf("Available voices:\n")
 	for _, voice := range listResponse.Voices {
-		fmt.Printf("  Name: %s  ID: %s\n", voice.Name, voice.Id)
+		fmt.Printf("  %+v\n", voice)
 	}
 	fmt.Printf("\n")
 
