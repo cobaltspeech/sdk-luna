@@ -24,7 +24,7 @@ response, err := client.ListVoices(context.Background())
 // Display the list
 fmt.Printf("Available voices:\n")
 for _, voice := range response.Voices {
-    fmt.Printf("  Name: %s  ID: %s\n", voice.Name, voice.Id)
+    fmt.Printf("  %+v\n", voice)
 }
 ```
 {{% /tab %}}
@@ -37,7 +37,8 @@ response = client.ListVoices()
 # Display the list
 print("Available voices:")
 for v in response.voices:
-    print("  Name: {}  ID:  {}".format(v.name, v.id))
+    print("  ID: {}  Name: {}  Sample Rate(Hz): {}  Language: {}".format(
+            v.id, v.name, v.sample_rate, v.language))
 ```
 {{% /tab %}}
 
@@ -50,7 +51,10 @@ std::vector<LunaVoice> voices = client.listVoices();
 std::cout << "Available voices:" << std::endl;
 for (const LunaVoice &v : voices)
 {
-    std::cout << "  Name: " << v.name() << "  ID: " << v.id() << std::endl;
+    std::cout << "  ID: " << v.id() 
+              << "  Name: " << v.name()
+              << "  Sample Rate(Hz): " << v.sampleRate()
+              << "  Language: " << v.language() << "\n";
 }
 ```
 {{% /tab %}}

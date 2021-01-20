@@ -139,6 +139,8 @@ Description of a Luna Voice
 | ----- | ---- | ----- | ----------- |
 | id | string |  | Unique identifier of the voice. This identifier is used to choose the voice during a synthesis request, and is specified in the `SynthesizerConfig` message. |
 | name | string |  | Name of the voice. This is a concise name describing the voice, and maybe presented to the end-user, for example, to help which voice to choose for their TTS task. |
+| sample_rate | uint32 |  | The sample rate of this voice, returned in Hertz. |
+| language | string |  | The language code for this voice. |
 
 
 

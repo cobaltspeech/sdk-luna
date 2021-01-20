@@ -88,6 +88,12 @@ message Voice {
   // presented to the end-user, for example, to help which voice to choose for
   // their TTS task.
   string name = 2;
+
+  // The sample rate of this voice, returned in Hertz.
+  uint32 sample_rate = 3;
+
+  // The language code for this voice.
+  string language = 4;
 }
 
 // The message returned to the client by the `Synthesize` and
