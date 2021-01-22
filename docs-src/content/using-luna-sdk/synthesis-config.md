@@ -14,10 +14,9 @@ size. Except where noted, these options apply to both
 Voice models are defined in the Luna server config file, and the client
 can get a list of available voice models using the `ListVoices` method.
 
-{{% tabs %}}
+{{< tabs >}}
 
-{{% tab "Go" %}}
-``` go
+{{< tab "Go" "go" >}}
 // Get the list of voices from Luna
 response, err := client.ListVoices(context.Background())
 
@@ -26,11 +25,9 @@ fmt.Printf("Available voices:\n")
 for _, voice := range response.Voices {
     fmt.Printf("  %+v\n", voice)
 }
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% tab "Python" %}}
-``` python
+{{< tab "Python" "python" >}}
 # Get the list of voices from Luna
 response = client.ListVoices()
 
@@ -39,11 +36,9 @@ print("Available voices:")
 for v in response.voices:
     print("  ID: {}  Name: {}  Sample Rate(Hz): {}  Language: {}".format(
             v.id, v.name, v.sample_rate, v.language))
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% tab "C++" %}}
-``` c++
+{{< tab "C++" "c++" >}}
 // Get the list of voices from Luna
 std::vector<LunaVoice> voices = client.listVoices();
 
@@ -56,10 +51,9 @@ for (const LunaVoice &v : voices)
               << "  Sample Rate(Hz): " << v.sampleRate()
               << "  Language: " << v.language() << "\n";
 }
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% /tabs %}}
+{{< /tabs >}}
 
 The API requires the voice ID to be specified as part of the TTS synthesis
 request. The voice ID for each model is defined in the server's config file.
@@ -93,10 +87,9 @@ on the server.
 Below is an example showing how client code should set up the synthesis
 config.
 
-{{% tabs %}}
+{{< tabs >}}
 
-{{% tab "Go" %}}
-``` go
+{{< tab "Go" "go" >}}
 // Set up the synthesis config with the desired voice and encoding
 synthConfig := &lunapb.SynthesizerConfig{
     VoiceId: "1", // As defined in the Luna server config file
@@ -106,11 +99,9 @@ synthConfig := &lunapb.SynthesizerConfig{
     // with the application's desired buffer size.
     NSamples: 8096,
 }
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% tab "Python" %}}
-``` python
+{{< tab "Python" "python" >}}
 # Set up the synthesis config with the desired voice and encoding
 synth_config = SynthesizerConfig(
     voice_id="1", # As defined in the Luna server config file
@@ -119,11 +110,9 @@ synth_config = SynthesizerConfig(
     # If setting the buffer size for streaming, include this arg with
     # the application's desired buffer size.
     n_samples=8096)
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% tab "C++" %}}
-``` c++
+{{< tab "C++" "c++" >}}
 // Set up the synthesis config with the desired voice and encoding
 cobaltspeech::luna::SynthesizerConfig synthConfig;
 synthConfig.set_voice_id("1"); // As defined in the Luna server config file
@@ -132,7 +121,6 @@ synthConfig.set_encoding(cobaltspeech::luna::SynthesizerConfig::RAW_LINEAR16);
 // If setting the buffer size for streaming, include this line with the
 // application's desired buffer size.
 synthConfig.set_n_samples(8096);
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% /tabs %}}
+{{< /tabs >}}

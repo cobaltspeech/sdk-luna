@@ -50,33 +50,27 @@ to specify the server information and an audio playback application. The
 playback application can be anything so long as it accepts formatted audio
 data from stdin. To run the application, do the following:
 
-{{%tabs %}}
+{{< tabs >}}
 
-{{% tab "Go" %}}
-``` bash
+{{< tab "Go" "bash" >}}
 # After building via the `go build` command, run the CLI
 cd /path/to/sdk-luna/examples/go
 ./luna-cli -config /path/to/config.toml
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% tab "Python" %}}
-``` bash
+{{< tab "Python" "bash" >}}
 # After setting up an environment to use the Luna module, run the CLI
 cd /path/to/sdk-luna/examples/python
 python3 luna-cli.py -config /path/to/config.toml
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% tab "C++" %}}
-``` bash
+{{< tab "C++" "bash" >}}
 # After building the example
 cd /path/to/build/directory
 ./luna-cli -config /path/to/config.toml
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% /tabs %}}
+{{< /tabs >}}
 
 Once the application is running, simply enter the text to synthesize
 at the prompt.

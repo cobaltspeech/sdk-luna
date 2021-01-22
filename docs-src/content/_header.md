@@ -1,3 +1,3 @@
-![Cobalt's SDK Documentation](/sdk-luna/images/logo-white.png)
+![Cobalt's SDK Documentation](/images/logo-white.png)
 
 Luna SDK -- Cobalt

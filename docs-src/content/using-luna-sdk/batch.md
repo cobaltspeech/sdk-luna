@@ -28,10 +28,9 @@ Assuming the synthesis configuration has been
 [set up previously](../synthesis-config#example), here is an example
 showing how to use the batch synthesis method:
 
-{{% tabs %}}
+{{< tabs >}}
 
-{{% tab "Go" %}}
-``` go
+{{< tab "Go" "go" >}}
 // Make the synthesis request.
 request := &lunapb.SynthesizeRequest{
 	Config: synthConfig,
@@ -42,11 +41,9 @@ response, err := client.Synthesize(context.Background(), request)
 
 // Do something interesting with the returned audio.
 fmt.Printf("Received %v bytes of audio.\n", len(response.Audio))
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% tab "Python" %}}
-``` python
+{{< tab "Python" "python" >}}
 # Make the synthesis request.
 text = "this is an awesome sentence"
 request = SynthesizeRequest(config=synth_config, text=text)
@@ -54,18 +51,15 @@ response = client.Synthesize(request)
 
 # Do something interesting with the returned audio.
 print("Received {} bytes of audio.".format(len(response.audio)))
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% tab "C++" %}}
-``` c++
+{{< tab "C++" "c++" >}}
 // Make the synthesis request.
 std::string text = "this is an awesome sentence";
 ByteVector audio = client.synthesize(synthConfig, text);
 
 // Do something interesting with the returned audio.
 std::cout << "Received " << audio.size() << " bytes of audio." << std::endl;
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% /tabs %}}
+{{< /tabs >}}

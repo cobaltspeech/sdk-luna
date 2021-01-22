@@ -20,7 +20,7 @@ the SDK in a C++ project are described in detail in
 
 
 ## Go
-The Go SDK supports Go modules and requires Go 1.12 or later. To use the
+The Go SDK supports Go modules and requires Go 1.14 or later. To use the
 SDK, import this package into your application:
 
 ``` go
