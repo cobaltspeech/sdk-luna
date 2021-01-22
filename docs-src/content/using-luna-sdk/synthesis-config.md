@@ -8,7 +8,7 @@ Before we can run text-to-speech, the client needs to specify the
 configuration Luna should use to generate the audio. The Luna options
 include the specific voice model, the audio encoding, and the sample
 size. Except where noted, these options apply to both
-[batch synthesis](../batch) and [streaming synthesis](../streaming).
+[batch synthesis](../batch/) and [streaming synthesis](../streaming/).
 
 ## Voice ID
 Voice models are defined in the Luna server config file, and the client
@@ -74,7 +74,7 @@ sample rate.
 
 
 ## Buffer Size (Optional)
-When running [streaming synthesis](../streaming), a client may optionally
+When running [streaming synthesis](../streaming/), a client may optionally
 specify a buffer size. If set (and not zero), the server will wait until
 the buffer is full before sending the audio data to the client. In the
 case where the entire generated audio is less than the buffer size, the

@@ -4,7 +4,7 @@ description: "Describes how to stream synthesized audio as it is generated."
 weight: 26
 ---
 
-Unlike [batch synthesis](../batch), streaming synthesis begins to return the
+Unlike [batch synthesis](../batch/), streaming synthesis begins to return the
 generated audio data to the client as soon as it is ready, sending multiple
 data packets until synthesis has completed. While this method is slightly
 more complex than batch synthesis, it brings the following benefits:
