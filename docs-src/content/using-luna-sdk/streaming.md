@@ -27,7 +27,7 @@ file, or simply discards it.
 
 ## Example
 Assuming the synthesis configuration has been
-[set up previously](../synthesis-config#example), here is an example
+[set up previously](../synthesis-config/#example), here is an example
 showing how to use the streaming synthesis method:
 
 {{< tabs >}}
