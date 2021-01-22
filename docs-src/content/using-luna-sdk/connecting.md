@@ -4,7 +4,7 @@ description: "Describes how to connect to a running Luna server instance."
 weight: 23
 ---
 
-Once you have the Luna server [up and running](../../getting-started),
+Once you have the Luna server [up and running](../../getting-started/),
 you are ready to create a client connection.
 
 <!--more-->

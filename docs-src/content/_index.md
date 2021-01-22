@@ -14,6 +14,6 @@ submits text to Luna, and Luna returns synthesized audio data that mimics human
 speech.
 
 For information about installing and running the Luna server, see the
-[Getting Started](./getting-started) section. For details about using the SDK,
-see [Using Luna SDK](./using-luna-sdk).
+[Getting Started](./getting-started/) section. For details about using the SDK,
+see [Using Luna SDK](./using-luna-sdk/).
 
