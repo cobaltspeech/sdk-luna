@@ -18,10 +18,9 @@ these can be replaced with your server address in actual code.
 The following code snippet connects to the server and queries its version.  It uses our recommended 
 default setup, expecting the server to be listening on a TLS encrypted connection.
 
-{{%tabs %}}
+{{< tabs >}}
 
-{{% tab "Go" %}}
-``` go
+{{< tab "Go" "go" >}}
 package main
 
 import (
@@ -50,21 +49,17 @@ func main() {
 
 	fmt.Println(version)
 }
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% tab "Python" %}}
-``` python
+{{< tab "Python" "python" >}}
 from luna.client import LunaClient
 
 client = LunaClient(service_address="localhost:9001")
 version = client.Version().version
 print("Luna version {}".format(version))
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% tab "C++" %}}
-``` c++
+{{< tab "C++" "c++" >}}
 // File - main.cpp
 
 #include "luna_client.h"
@@ -83,10 +78,9 @@ int main(int argc, char *argv[])
 	return 0;
 }
 
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{%/tabs %}}
+{{< /tabs >}}
 
 
 ## Insecure Connection
@@ -97,27 +91,21 @@ attempting to connect with an insecure client will fail.
 
 To create an insecure connection, do the following when creating the client:
 
-{{%tabs %}}
+{{< tabs >}}
 
-{{% tab "Go" %}}
-``` go
+{{< tab "Go" "go" >}}
 client, err := luna.NewClientWithInsecure(serverAddr)
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% tab "Python" %}}
-``` python
+{{< tab "Python" "python" >}}
 client = LunaClient.with_insecure(service_address="localhost:9001")
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% tab "C++" %}}
-``` c++
+{{< tab "C++" "c++" >}}
 LunaClient client(serverAddr, false);
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{%/tabs %}}
+{{< /tabs >}}
 
 ## Client Authentication
 
@@ -135,31 +123,25 @@ Please note that in the client-authentication mode, the client will still also
 verify the server's certificate, and therefore this setup uses mutually
 authenticated TLS. This can be done with:
 
-{{%tabs %}}
+{{< tabs >}}
 
-{{% tab "Go" %}}
-``` go
+{{< tab "Go" "go" >}}
 // certfile is a path to the ssl certificate file
 certfile="/path/to/cert.pem"
 client, err := luna.NewClientWithCertFile(serverAddr, certfile)
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% tab "Python" %}}
-``` python
+{{< tab "Python" "python" >}}
 # certfile is a path to the ssl certificate file
 certfile="/path/to/cert.pem"
 client = LunaClient.with_cert_file(service_address="localhost:9001",
                                    certfile=certfile)
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% tab "C++" %}}
-``` c++
+{{< tab "C++" "c++" >}}
 
 // Currently unsupported in C++.
 
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{%/tabs %}}
+{{< /tabs >}}

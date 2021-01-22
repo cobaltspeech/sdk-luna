@@ -28,13 +28,12 @@ Code generation has the following dependencies:
 
 ### Generating Documentation
 The documentation here is generated using the excellent static-site generator,
-[Hugo](https://gohugo.io). The hugo-template in use is
-[docuapi](https://themes.gohugo.io/docuapi/). The content is authored in the
-`docs-src/content` folder, and hugo-generated static website is stored in the `docs`
-folder.
+[Hugo](https://gohugo.io). The content is authored in the
+`docs-src/content` folder. The hugo-generated static website should not be
+committed back to this repository.
 
 You can download the latest hugo binary from the [release
-page](https://github.com/gohugoio/hugo/releases).  Version 0.54 or later is
+page](https://github.com/gohugoio/hugo/releases).  Version 0.69.0 or later is
 recommended.
 
 To generate the static documentation content, run:
@@ -43,8 +42,5 @@ To generate the static documentation content, run:
 pushd grpc && make && popd
 
 # then build the static documentation pages
-pushd docs-src && hugo -d ../docs && popd
+pushd docs-src && hugo -d <path/to/build/dir> && popd
 ```
-
-Please make sure that when changing the documentation, the newly generated
-changes in `docs` are also checked into this repository.

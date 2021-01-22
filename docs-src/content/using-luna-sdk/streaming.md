@@ -30,10 +30,9 @@ Assuming the synthesis configuration has been
 [set up previously](../synthesis-config#example), here is an example
 showing how to use the streaming synthesis method:
 
-{{% tabs %}}
+{{< tabs >}}
 
-{{% tab "Go" %}}
-``` go
+{{< tab "Go" "go" >}}
 // Create the synthesis stream
 request := &lunapb.SynthesizeRequest{
 	Config: synthConfig,
@@ -61,11 +60,9 @@ for {
 }
 
 fmt.Printf("Synthesis complete.\n")
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% tab "Python" %}}
-``` python
+{{< tab "Python" "python" >}}
 # Create the synthesis stream
 text = "this is an even better sentence"
 request = SynthesizeRequest(config=synth_config, text=text)
@@ -78,11 +75,9 @@ for response in stream:
     print("Received {} bytes of audio.".format(len(response.audio)))
 
 print("Synthesis complete.")
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% tab "C++" %}}
-``` c++
+{{< tab "C++" "c++" >}}
 // Create the synthesis stream
 std::string text = "this is an even better sentence";
 LunaSynthesizerStream stream = client.synthesizeStream(synthConfig, text);
@@ -98,7 +93,6 @@ while(stream.receiveAudio(audio))
 
 stream.close();
 std::cout << "Synthesis complete." << std::endl;
-```
-{{% /tab %}}
+{{< /tab >}}
 
-{{% /tabs %}}
+{{< /tabs >}}
