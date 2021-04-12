@@ -8,3 +8,5 @@ __pycache__
 # python using pip install -e </path/to/src>
 .eggs
 *.egg-info
+/deps
+.build
