@@ -26,7 +26,14 @@ ${PY_OUTDIR}/luna_pb2.py: luna.proto
 ${PY_OUTDIR}/luna_pb2_grpc.py: luna.proto
 	mkdir -p ${PY_OUTDIR}
 	python -m grpc_tools.protoc -I. --grpc_python_out=${PY_OUTDIR} $<
-
+swift:
+	protoc -I . -I ${PROTOINC} \
+		--plugin=$$(which protoc-gen-grpc-swift) \
+		--grpc-swift_out=Client=true,Server=false,Visibility=Public:./swift-cubic \
+		--plugin=$$(which protoc-gen-swift) \
+		--swift_opt=Visibility=Public \
+		--swift_out=./swift-cubic \
+		luna.proto
 gendoc:
 	protoc \
 		-I . \
