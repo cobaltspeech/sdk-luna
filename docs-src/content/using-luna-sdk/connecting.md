@@ -94,7 +94,7 @@ To create an insecure connection, do the following when creating the client:
 {{< tabs >}}
 
 {{< tab "Go" "go" >}}
-client, err := luna.NewClientWithInsecure(serverAddr)
+client, err := luna.NewClient(serverAddr, luna.WithInsecure())
 {{< /tab >}}
 
 {{< tab "Python" "python" >}}
@@ -128,7 +128,8 @@ authenticated TLS. This can be done with:
 {{< tab "Go" "go" >}}
 // certfile is a path to the ssl certificate file
 certfile="/path/to/cert.pem"
-client, err := luna.NewClientWithCertFile(serverAddr, certfile)
+certData, err := os.ReadFile(certfile)
+client, err := luna.NewClient(serverAddr, luna.WithServerCert(certData))
 {{< /tab >}}
 
 {{< tab "Python" "python" >}}
