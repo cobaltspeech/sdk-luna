@@ -29,7 +29,7 @@ let package = Package(
             targets: ["Luna"]),
     ],
     dependencies: [
-        .package(url: "git@github.com:grpc/grpc-swift.git", .exact("1.4.1"))
+        .package(url: "git@github.com:grpc/grpc-swift.git", .exact("1.6.1"))
     ],
     targets: [
         .target(
